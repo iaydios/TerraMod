@@ -65,7 +65,7 @@ sh build_all.sh             # -> out/TerraBattle-mod.apk, out/reTB-Host-mod.apk,
    - Recomputes the integrity hashes and registers the new images in the built-in AssetVersions index.
    - Applies any native patches a spec lists, then aligns and signs the APK.
    - `--dump` writes the modded databases, which step 2 needs.
-2. **Server APK** (`tools/host_mod.py`)
+2. **Server APK** (`tools/host_mod.py`; for a server on a PC see [below](#playing-with-a-pc-server-retbpc--retb-folder))
    - Adds the new characters, recodes, EXP caps and patchData.
    - Adds the companion rules from `server/buddies.json` and recompiles the changed `.pyc` files.
    - Signs the APK.
@@ -76,6 +76,24 @@ sh build_all.sh             # -> out/TerraBattle-mod.apk, out/reTB-Host-mod.apk,
 Optional: `tools/edit_save.py` sets a character's level in a reTBHost account export.
 
 > Both APKs are signed with your own key, so they cannot be installed over the official builds. Players must **export their account** in reTBHost first, uninstall the originals, install the modded APKs, then import the gdresources tar and the account.
+
+## Playing with a PC server (reTBpc / reTB folder)
+
+If the server runs on a PC instead of on the phone, you do not need the reTB Host APK. Patch the reTB folder directly:
+
+```sh
+python3 tools/host_mod.py --retb-folder /path/to/reTB --chrdb out/dump/ChrDatabase.json \
+    --new-chr 1289 --buddies server/buddies.json
+```
+
+- `--chrdb` is the modded database that `terra_mod.py build --dump out/dump` writes.
+- The command makes the same server edits as the APK mode, but in place: no signing, no `.pyc` compile.
+- It finds every `tb_server` package under the folder, including the copy that **reTBpc installs into `reTB/.venv/.../site-packages`**. That installed copy is the one the server actually runs, so it is patched too.
+- Each original file is kept next to it as `*.terramod-orig`. Re-running always starts from those originals, so it is safe to run again after changing your specs.
+- Restart the server afterwards.
+- **A server update in reTBpc replaces the patched files.** Run the command again after updating.
+
+The phones still need the modded **game** APK, since the new characters and skills live in the client. They do not need the modded reTB Host APK. The images go into the gdresources folder that the PC server serves: copy the `.bin` files from `out/gdresources/` into it. No tar is needed.
 
 ## Making your own content
 

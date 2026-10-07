@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
-"""Patch a reTB Host APK so its server knows the modded characters / recodes.
+"""Patch the reTB server so it knows the modded characters, recodes and companions.
 
-    python3 host_mod.py --apk reTB-Host.apk --chrdb <modded ChrDatabase.json> --new-chr 1289 --out reTB-Host-mod.apk
+Two targets, same edits:
 
-Edits (inside assets/chaquopy/app.imy -> tb_server/data):
-  rebirth_map.json, chr_to_jobs.json, chr_names.json, chr_rarity.json, chr_to_species.json,
-  joblevel_exp_caps.json, patchData.zip (chrInfos + chrdata)
-then updates chaquopy build.json, aligns (.so -> 16 KiB, stored -> 4) and signs with apksigner.
+  reTB Host APK (server running on the phone):
+    python3 host_mod.py --apk reTB-Host.apk --chrdb <modded ChrDatabase.json> --new-chr 1289 \
+        --buddies ../server/buddies.json --out reTB-Host-mod.apk --keystore terramod.keystore
+
+  reTB folder (server running on a PC, e.g. reTBpc or a plain reTB checkout):
+    python3 host_mod.py --retb-folder C:/path/to/reTB --chrdb <modded ChrDatabase.json> --new-chr 1289 \
+        --buddies ../server/buddies.json
+
+Edits (tb_server/data): rebirth_map.json, chr_to_jobs.json, chr_names.json, chr_rarity.json,
+chr_to_species.json, joblevel_exp_caps.json, patchData.zip (chrInfos + chrdata), buddydb_full.json;
+(tb_server/handlers/userdata): buddy.py, buddy_consts.py, buddy_helpers.py.
+APK mode then recompiles the .pyc, updates chaquopy build.json, aligns and signs.
+Folder mode writes the files in place (originals kept as *.terramod-orig) and needs no signing.
 """
 import argparse
 import hashlib
@@ -278,17 +287,87 @@ def write_aligned(entries, path):
         f.write(struct.pack("<4s4H2IH", b"PK\x05\x06", 0, 0, len(central), len(central), end - cd, cd, 0))
 
 
+ORIG_SUFFIX = ".terramod-orig"
+
+
+def find_tb_servers(folder):
+    """Every tb_server package under a reTB folder that the server may import:
+    the source tree and any installed copy inside a virtualenv (reTBpc installs one)."""
+    folder = os.path.abspath(folder)
+    found = []
+    for root, dirs, _files in os.walk(folder):
+        dirs[:] = [d for d in dirs if d not in ("__pycache__", ".git", "node_modules", "build", "tests")]
+        if os.path.basename(root) == "tb_server" and os.path.isfile(os.path.join(root, "data", "rebirth_map.json")):
+            found.append(root)
+            dirs[:] = []
+    return sorted(found)
+
+
+def edit(files, a, log):
+    chrdb = json.load(open(a.chrdb, encoding="utf-8"))
+    patch_app(files, chrdb, a.new_chr, log)
+    if a.buddies:
+        patch_buddies(files, json.load(open(a.buddies, encoding="utf-8")), log)
+
+
+def patch_folder(a, log):
+    servers = find_tb_servers(a.retb_folder)
+    if not servers:
+        raise SystemExit(f"no tb_server package (with data/rebirth_map.json) found under {a.retb_folder}")
+    for srv in servers:
+        base = os.path.dirname(srv)
+        files = {}
+        for sub in ("data", os.path.join("handlers", "userdata")):
+            for fn in os.listdir(os.path.join(srv, sub)):
+                if fn.endswith((".json", ".zip", ".py")):
+                    path = os.path.join(srv, sub, fn)
+                    # always start from the pristine original, so re-running with new specs is safe
+                    src = path + ORIG_SUFFIX if os.path.exists(path + ORIG_SUFFIX) else path
+                    files["tb_server/" + os.path.relpath(path, srv).replace(os.sep, "/")] = open(src, "rb").read()
+        before = dict(files)
+        sub_log = []
+        edit(files, a, sub_log)
+        changed = sorted(k for k, v in files.items() if before[k] != v)
+        for k in changed:
+            path = os.path.join(base, *k.split("/"))
+            if not os.path.exists(path + ORIG_SUFFIX):
+                with open(path, "rb") as fsrc, open(path + ORIG_SUFFIX, "wb") as fdst:
+                    fdst.write(fsrc.read())
+            with open(path, "wb") as f:
+                f.write(files[k])
+            cache = os.path.join(os.path.dirname(path), "__pycache__")
+            if k.endswith(".py") and os.path.isdir(cache):
+                stem = os.path.basename(path)[:-3] + "."
+                for c in os.listdir(cache):
+                    if c.startswith(stem) and c.endswith(".pyc"):
+                        os.remove(os.path.join(cache, c))  # stale bytecode; Python rebuilds it
+        if not log:
+            log.extend(sub_log)
+        log.append(f"patched {len(changed)} file(s) in {srv}")
+    if any(os.sep + "site-packages" + os.sep in s + os.sep for s in servers):
+        log.append("note: an installed copy (site-packages) was patched too. A server update/reinstall "
+                   "replaces it - run this command again afterwards.")
+    log.append("restart the server to load the changes; originals are kept next to each file as *" + ORIG_SUFFIX)
+
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--apk", required=True)
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    tgt = ap.add_mutually_exclusive_group(required=True)
+    tgt.add_argument("--apk", help="reTB Host APK to patch (server on the phone)")
+    tgt.add_argument("--retb-folder", help="reTB folder to patch in place (server on a PC, e.g. reTBpc's reTB folder)")
     ap.add_argument("--chrdb", required=True)
     ap.add_argument("--new-chr", type=int, nargs="+", required=True)
-    ap.add_argument("--out", required=True)
-    ap.add_argument("--keystore", required=True)
+    ap.add_argument("--out", help="output APK (APK mode)")
+    ap.add_argument("--keystore", help="signing keystore (APK mode; created if missing)")
     ap.add_argument("--buddies", help="JSON list of custom companions for the server (see patch_buddies)")
     a = ap.parse_args()
     log = []
-    chrdb = json.load(open(a.chrdb, encoding="utf-8"))
+    if a.retb_folder:
+        patch_folder(a, log)
+        print("\n".join(log))
+        return
+    if not (a.out and a.keystore):
+        ap.error("--apk needs --out and --keystore")
     host = zipfile.ZipFile(a.apk)
     app = zipfile.ZipFile(io.BytesIO(host.read("assets/chaquopy/app.imy")))
     files = {}
@@ -296,9 +375,7 @@ def main():
         if n.startswith("tb_server/"):
             files[n] = app.read(n)
     before = dict(files)
-    patch_app(files, chrdb, a.new_chr, log)
-    if a.buddies:
-        patch_buddies(files, json.load(open(a.buddies, encoding="utf-8")), log)
+    edit(files, a, log)
     changed = {k for k, v in files.items() if before.get(k) != v}
     compile_pyc(files, changed, log)
     changed = {k: v for k, v in files.items() if before.get(k) != v}
