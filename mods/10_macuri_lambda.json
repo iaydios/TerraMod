@@ -1,0 +1,200 @@
+{
+  "_note": "Ma'curi Λ — Class S (rarity 6), spear. Skills reference new skills by '@key'.",
+  "skills": [
+    {
+      "key": "gigaspear_column",
+      "template": 2600,
+      "set": {
+        "condition": 0,
+        "emitRatio": 30,
+        "power": 2.0
+      }
+    },
+    {
+      "key": "spear_tomb",
+      "template": 2452,
+      "set": {
+        "condition": 0,
+        "emitRatio": 20,
+        "power": 1.0
+      },
+      "name": {
+        "en": "Spear Tomb",
+        "ja": "槍塚",
+        "zh_tw": "槍塚"
+      },
+      "desc": {
+        "en": "Impale surrounding foes with a forest of spears.",
+        "ja": "無数の槍で周囲を貫く",
+        "zh_tw": "以無數長槍貫穿周圍敵人"
+      }
+    },
+    {
+      "key": "coercion",
+      "template": 1657,
+      "set": {
+        "kind": 2,
+        "condition": 4,
+        "emitRatio": 10,
+        "power": 2.0,
+        "spower": 1.0,
+        "status": 3,
+        "successRate": 100,
+        "life": 2,
+        "effID": 54
+      },
+      "name": {
+        "en": "Coercion",
+        "ja": "威圧",
+        "zh_tw": "威逼"
+      },
+      "desc": {
+        "en": "Counter pincer attacks and paralyze foes for 1 turn.",
+        "ja": "はさみ攻撃へのカウンター、1ターン麻痺させる",
+        "zh_tw": "對夾擊進行反擊，並使對方麻痺1回合"
+      }
+    },
+    {
+      "key": "ten_thousand_spears",
+      "template": 1691,
+      "set": {
+        "condition": 1,
+        "emitRatio": 5,
+        "power": 10000.0
+      },
+      "name": {
+        "en": "Ten Thousand Spears",
+        "ja": "一万本槍",
+        "zh_tw": "萬槍"
+      },
+      "desc": {
+        "en": "Inflicts 10,000 damage.",
+        "ja": "ダメージ10000攻撃",
+        "zh_tw": "10000傷害的攻擊"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": 1289,
+      "template_character": 923,
+      "name": {
+        "en": "Ma'curi Λ",
+        "ja": "マッカリー・Λ",
+        "zh_tw": "馬卡利・Λ"
+      },
+      "rarity": 6,
+      "jobs": [
+        {
+          "id": 5166,
+          "template_job": 5022,
+          "name": {
+            "en": "Ma'curi Λ",
+            "ja": "マッカリー・Λ",
+            "zh_tw": "馬卡利・Λ"
+          },
+          "image_id": 3001,
+          "fields": {
+            "Gender": 1,
+            "Species": 2,
+            "Attrib": 2,
+            "SkillAttrib": 0,
+            "HPcoeff": 1.100000023841858,
+            "ATKcoeff": 1.100000023841858,
+            "DEFcoeff": 1.100000023841858,
+            "SATKcoeff": 1.100000023841858,
+            "SDEFcoeff": 1.100000023841858,
+            "EXPcoeff": 2.0999999046325684,
+            "EXPmax": 9000000
+          },
+          "stats": {
+            "HP": [
+              505,
+              4800
+            ],
+            "ATK": [
+              63,
+              510
+            ],
+            "DEF": [
+              34,
+              300
+            ],
+            "SATK": [
+              22,
+              195
+            ],
+            "SDEF": [
+              28,
+              254
+            ]
+          },
+          "skills": [
+            "@gigaspear_column",
+            "@spear_tomb",
+            "@coercion",
+            "@ten_thousand_spears"
+          ],
+          "skill_levels": [
+            1,
+            30,
+            50,
+            80
+          ],
+          "profile": {
+            "en": "He had become a master painter, wandering the cosmos until he found his sanctuary in a beautiful land called the Wanli Mountains. Captivated by its fragrant breezes and breathtaking scenery, he stayed.\n\nA decade of peace shattered when the vanguard of Planet Cantral crushed the mountain ranges beneath their heels. Ma'curi wielded his spear once again, fighting a bloody but futile war. The land was plundered, and he was left for dead—a broken corpse in the ruins.\n\nThe Cantral army claimed his remains, subjecting him to cruel modifications and brainwashing. He was reborn as a cyborg—a soulless killing machine. But during a planetary invasion, he encountered Myne. A blinding pain tore through his skull as suppressed memories violently clawed their way back.\n\nUnleashing a blood-soaked rampage, he decimated the Cantral cruiser. Standing amidst the flames, he pressed the tip of his spear against the commander's throat.\n\nMa'curi: \"Not yesterday. And not tomorrow. Today.\"",
+            "ja": "名高い画家となった彼は\n宇宙を放浪した末に、\n「万里山」と呼ばれる美しい地に\n安住の場所を見つけた。\n芳しい風と息をのむ景色に\n心を奪われ、彼はそこに留まった。\n\n十年の平穏は、\nカントラル星の先遣部隊が\n山々を踏み砕いた日に終わった。\nマッカリーは再び槍を取り、\n血みどろの、しかし報われぬ戦いに\n身を投じた。\n大地は略奪され、彼は\n廃墟に打ち捨てられた。\n\nカントラル軍は彼の亡骸を回収し、\n残酷な改造と洗脳を施した。\n彼はサイボーグとして蘇った――\n魂なき殺戮機械として。\n\nだがある惑星侵攻の最中、\n彼はマインと出会う。\n頭蓋を裂くような激痛と共に、\n封じられた記憶が\n荒々しく這い上がってきた。\n\n血に塗れた暴走の果てに、\n彼はカントラルの巡洋艦を壊滅させた。\n炎の中に立ち、\n司令官の喉元に槍の切っ先を突きつける。\n\n「昨日でも、明日でもない。\n　今日だ」",
+            "zh_tw": "成為一代名畫家的他，在宇宙間流浪，直到在一片名為「萬里山」的美麗土地上找到了歸宿。芬芳的微風與壯麗的景色令他著迷，於是他留了下來。\n\n十年的平靜，在坎特拉爾星的先鋒部隊將群山踏碎於腳下時戛然而止。馬卡利再次握起長槍，投身一場血腥卻徒勞的戰爭。這片土地遭到掠奪，而他被當作死人棄置——廢墟中一具殘破的屍體。\n\n坎特拉爾軍回收了他的遺骸，對他施以殘酷的改造與洗腦。他以半機械之身重生——成為一台沒有靈魂的殺戮機器。然而在一次行星侵略戰中，他遇見了麥恩。一陣劇痛撕裂他的頭顱，被封印的記憶猛烈地掙扎而出。\n\n他展開一場血腥的暴走，摧毀了坎特拉爾的巡洋艦。佇立於烈焰之中，他將槍尖抵在指揮官的咽喉上。\n\n馬卡利：「不是昨天，也不是明天。就是今天。」"
+          }
+        }
+      ],
+      "recode": {
+        "from": 10,
+        "coins": 20000,
+        "items": [
+          [
+            132,
+            5
+          ],
+          [
+            97,
+            1
+          ],
+          [
+            10,
+            15
+          ]
+        ],
+        "mons": [
+          [
+            69,
+            50
+          ],
+          [
+            176,
+            50
+          ]
+        ]
+      },
+      "generation": 2
+    }
+  ],
+  "asset_db": {
+    "Pieces": [
+      {
+        "id": 3001,
+        "w": 106,
+        "h": 106,
+        "ver": 131
+      }
+    ],
+    "Illusts": [
+      {
+        "id": 3001,
+        "w": 878,
+        "h": 1024,
+        "ver": 131
+      }
+    ]
+  }
+}

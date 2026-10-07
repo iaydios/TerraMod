@@ -1,0 +1,25 @@
+[
+ {
+  "id": 498,
+  "rarity_letter": "Z",
+  "unique": true,
+  "pool": null,
+  "name": {
+   "en": "Ma'curi's Mech Arm",
+   "ja": "マッカリーの機械腕",
+   "fr": "",
+   "de": "",
+   "es": "",
+   "zh_tw": "馬卡利的機械手臂"
+  },
+  "max_level": 1,
+  "exp_max": 0,
+  "base_exp": 1,
+  "base_coin": 1,
+  "exp_coeff": 2.0999999046325684,
+  "evolve_id": 0,
+  "coins_to_evolve": 0,
+  "same_bonus_bias": 1,
+  "after_chr": 1289
+ }
+]

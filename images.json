@@ -1,0 +1,9 @@
+[
+ {"new": "img_3001",       "template": "img_2124",    "src": "art/piece.png"},
+ {"new": "illust_3001",    "template": "illust_2124", "src": "art/illust.png"},
+ {"new": "profile_3001",   "src": "art/profile.jpg"},
+ {"new": "profile_3001_m", "src": "art/profile_m.jpg", "prefix_of": "profile_3001"},
+ {"new": "buddy_521a",     "template": "buddy_513a",  "src": "art/buddy_521a.png"},
+ {"new": "buddy_521b",     "template": "buddy_513b",  "src": "art/buddy_521b.png"},
+ {"new": "bimg_521",       "template": "bimg_513",    "src": "art/bimg_521.png"}
+]

@@ -1,0 +1,109 @@
+{
+  "_note": "Ma'curi's Mech Arm — Z companion, exclusive to Ma'curi (and Ma'curi Λ via ancestor), Lv1 max, skill Mech Frenzy.",
+  "skills": [
+    {
+      "key": "mech_frenzy",
+      "template": 3029,
+      "set": {
+        "condition": 1,
+        "range": 3,
+        "sx": 0,
+        "sy": 0,
+        "power": 1.0,
+        "emitRatio": 100,
+        "blowOff": 0,
+        "life": 0,
+        "successRate": 4242,
+        "effID": 99
+      },
+      "name": {
+        "en": "Mech Frenzy",
+        "ja": "機械狂暴",
+        "zh_tw": "機械狂暴"
+      },
+      "desc": {
+        "en": "Strike the pincered foe for x1.0-5.0 random damage (x2.5 most likely).",
+        "ja": "はさんだ敵に×1.0～5.0のランダムダメージの打撃（×2.5が最も出やすい）",
+        "zh_tw": "對夾擊的敵人造成×1.0～5.0的隨機打擊傷害（×2.5最常出現）"
+      },
+      "range": {
+        "en": "",
+        "ja": "",
+        "zh_tw": ""
+      }
+    }
+  ],
+  "buddies": [
+    {
+      "id": 498,
+      "template": 490,
+      "name": {
+        "en": "Ma'curi's Mech Arm",
+        "ja": "マッカリーの機械腕",
+        "zh_tw": "馬卡利的機械手臂"
+      },
+      "desc": {
+        "en": "The cybernetic arm the Cantral army forced upon Ma'curi. Even after his memories returned, it still remembers nothing but how to destroy.",
+        "ja": "カントラル軍がマッカリーに\n埋め込んだ機械の腕。\n記憶を取り戻した今も、\nこの腕だけは破壊しか覚えていない。",
+        "zh_tw": "坎特拉爾軍強加在馬卡利身上的機械手臂。即使他已取回記憶，這條手臂依然只記得如何破壞。"
+      },
+      "sortNameJa": "マッカリーノキカイウデ",
+      "SortID": 492,
+      "exclusiveChrID": 10,
+      "exclusiveSpeciesID": 0,
+      "rarity": 8,
+      "type": 9,
+      "attrib": 0,
+      "kind": 0,
+      "RequiredLevel": 1,
+      "MaxLevel": 1,
+      "ATKmin": 10,
+      "DEFmin": 10,
+      "SATKmin": 10,
+      "SDEFmin": 10,
+      "BOOSTmin": 100,
+      "ATKmax": 10,
+      "DEFmax": 10,
+      "SATKmax": 10,
+      "SDEFmax": 10,
+      "BOOSTmax": 100,
+      "EXPmax": 0,
+      "BaseEXP": 1,
+      "BaseCOIN": 1,
+      "evolveID": 0,
+      "coinsToEvolve": 0,
+      "canDrop": 0,
+      "image_id": 521,
+      "skill": "@mech_frenzy"
+    }
+  ],
+  "asset_db": {
+    "BuddyImages": [
+      {
+        "id": 0,
+        "name": "buddy_521a",
+        "w": 367,
+        "h": 605,
+        "ver": 131
+      },
+      {
+        "id": 0,
+        "name": "buddy_521b",
+        "w": 235,
+        "h": 327,
+        "ver": 131
+      }
+    ],
+    "BuddyThumbs": [
+      {
+        "id": 521,
+        "w": 106,
+        "h": 106,
+        "ver": 131
+      }
+    ]
+  },
+  "native": [
+    "random_power"
+  ]
+}

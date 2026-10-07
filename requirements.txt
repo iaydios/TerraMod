@@ -1,0 +1,3 @@
+Pillow>=10
+# optional, only for tools/analysis/texdump.py
+# texture2ddecoder

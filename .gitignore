@@ -1,0 +1,18 @@
+# never commit game files, builds or keys
+input/*
+!input/README.md
+out/
+art/*
+!art/README.md
+build-tools/
+*.apk
+*.idsig
+*.so
+*.keystore
+*.jks
+*.bin
+*.tar
+native/etcpak/
+native/lz4/
+__pycache__/
+work/
