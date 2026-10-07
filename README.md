@@ -1,86 +1,101 @@
 # TerraMod
 
-**English summary:** A toolchain for adding *new content* (characters, DNA recodes, skills, companions/buddies, images) to Terra Battle (Unity 2017.4, IL2CPP, arm64) running against the reTB private server (reTBHost). Content is written as JSON specs. The tools re-encode the game databases inside `data.unity3d` byte-exactly, add the images to the asset index, optionally apply small opt-in native patches to `libil2cpp.so`, patch the reTBHost server (Chaquopy/FastAPI) to match, and sign both APKs. Every step verifies itself: it round-trips the originals, re-reads its output, and checks the expected bytes before patching.
+TerraMod is a toolchain for adding **new content** to Terra Battle when it runs against the reTB private server (reTBHost). Supported content: characters, DNA recodes, skills, companions (buddies) and images. The game is Unity 2017.4, IL2CPP, arm64.
 
-> 本專案**不含**任何遊戲本體、APK、遊戲資料或美術素材。使用者必須自備合法取得的檔案。
+You describe the content in JSON specs, and the tools do the rest:
 
----
+- re-encode the game databases inside `data.unity3d`, byte for byte;
+- register new images in the client's asset index;
+- optionally apply small, opt-in native patches to `libil2cpp.so`;
+- patch the reTBHost server (Chaquopy / FastAPI) to match;
+- align and sign both APKs.
 
-## 能做什麼
+Every step checks its own work. The originals must round-trip exactly before anything changes, every output is read back, and native patch sites are matched against the expected original bytes before they are written.
 
-| 功能 | 說明 |
+> This repository contains **no** game files, APKs, game data or artwork. You must supply your own legally obtained copies.
+
+## Features
+
+| Feature | Details |
 |---|---|
-| 新角色 / 新職業 | 從現有角色複製後修改名稱、數值、技能、立繪 ID、個人故事（6 語系） |
-| DNA Recode | 指定來源角色、金幣、3 種素材、2 隻素材角色 |
-| 新技能 | 從現有技能複製，修改 `SkillType` 任意欄位 |
-| 新小跟班 (Buddy) | 專屬角色、稀有度、數值、技能、圖片 |
-| 伺服器規則 | 唯一 / 上鎖（不能賣、不能當素材）、擁有某角色後下一次金幣抽獎保底 |
-| 圖片 | 棋子 / 立繪 / 個人檔案 / 小跟班大圖與縮圖，產生可下載的 gdresources 檔 |
-| 原生補丁（選用） | `random_power`：加權隨機傷害倍率；`star_range`：米字形範圍 |
-| 存檔工具 | 直接設定 reTBHost 匯出存檔中角色的等級 |
+| New characters / jobs | Clone an existing character, then change names, stats, skills, image ID and profile story (6 languages) |
+| DNA recodes | Source character, coin cost, 3 item types and 2 material characters |
+| New skills | Clone an existing skill and change any `SkillType` field |
+| New companions | Exclusive character, rarity, stats, skill and images |
+| Server rules | Unique and locked companions (cannot be sold or used as material); a companion guaranteed on the next coin draw after the player owns a given character |
+| Images | Pieces, illustrations, profiles, and companion art and thumbnails, generated as downloadable gdresources files |
+| Native patches (optional) | `random_power` multiplies damage by a weighted random factor; `star_range` gives an 8-way star area |
+| Save tool | Set a character's level in a reTBHost account export |
 
-範例 mod：`mods/10_macuri_lambda.json`（馬卡利・Λ）和 `mods/11_macuri_mech_arm.json`（馬卡利的機械手臂）。
+The repo ships with two example mods:
 
-## 需求
+- `mods/10_macuri_lambda.json`: the character Ma'curi Λ, with a DNA recode and four skills.
+- `mods/11_macuri_mech_arm.json`: the companion Ma'curi's Mech Arm, with a random-damage pincer skill.
 
-- Linux 或 WSL；Python **3.13**（必須與 reTBHost 內建的 Chaquopy Python 相同，因為要重新編譯 `.pyc`）
+## Requirements
+
+- Linux or WSL.
+- Python **3.13**. It must match the Chaquopy Python bundled in reTBHost, because server `.pyc` files are recompiled.
 - `pip install -r requirements.txt`
-- Java（`keytool`、`apksigner`），以及 Android build-tools 的 `zipalign` 與 `apksigner.jar`，放在 `build-tools/`（或用環境變數 `TERRAMOD_BT` 指定）
-- 只有用到原生補丁時才需要 `llvm-mc` 和 `llvm-objcopy`
-- 原生小工具：`sh native/build_native.sh`（編譯 `tools/libetc2.so`、`tools/liblz4.so`）
+- Java (`keytool`), plus Android build-tools `zipalign` and `apksigner.jar` in `build-tools/`. You can point to another folder with `TERRAMOD_BT`.
+- `llvm-mc` and `llvm-objcopy`, only if you use the native patches.
+- The native helpers: run `sh native/build_native.sh` to build `tools/libetc2.so` (ETC2 encoder, wraps etcpak) and `tools/liblz4.so`.
 
-## 自備檔案（放在 `input/`）
+## Inputs (put them in `input/`)
 
-| 檔案 | 從哪裡來 |
+| Path | Source |
 |---|---|
-| `TerraBattle.apk` | 原始 reTB 遊戲 APK（arm64） |
-| `reTB-Host.apk` | 原始 reTBHost APK |
-| `game_data/` | reTBHost 解出的遊戲資料 `extracted-gamedata/game_data/`（需要 `ChrDatabase.json`、`SkillData.json`、`EffectSet.json`、`BuddyDatabase.json`）。建置時會先驗證這些 JSON 能逐位元組重建原 APK 內的資料，對不上就停止 |
-| `gdresources/` | 自己裝置上的 gdresources（拿來當圖片模板） |
-| `art/` | 新圖片 PNG / JPG（見 `images.json`） |
+| `TerraBattle.apk` | The original reTB game APK (arm64) |
+| `reTB-Host.apk` | The original reTBHost APK |
+| `game_data/` | reTBHost's extracted game data (`extracted-gamedata/game_data/`). The build needs `ChrDatabase.json`, `SkillData.json`, `EffectSet.json` and `BuddyDatabase.json`, and stops unless these re-encode byte-exactly to the data in your APK. |
+| `gdresources/` | Your original gdresources folder, used as image templates |
+| `art/` | Your new PNG / JPEG images, as listed in `images.json` |
 
-## 流程
+## Build
 
 ```sh
-sh native/build_native.sh   # 第一次
-sh build_all.sh             # 產出 out/TerraBattle-mod.apk、out/reTB-Host-mod.apk、out/gdresources/
+sh native/build_native.sh   # once
+sh build_all.sh             # -> out/TerraBattle-mod.apk, out/reTB-Host-mod.apk, out/gdresources/
 ```
 
-`build_all.sh` 依序執行三個步驟，也可以分開跑：
+`build_all.sh` runs three steps, which you can also run on their own:
 
-1. **遊戲 APK**：`tools/terra_mod.py build`
-   - 讀取 `mods/*.json`，依檔名順序套用：技能 → 小跟班 → 角色
-   - 重算 job / buddy hash，把新圖片加進內建的 AssetVersions 索引
-   - 套用 spec 中 `"native"` 列出的補丁，最後對齊並簽名
-   - `--dump` 會輸出修改後的資料庫，下一步要用
-2. **伺服器 APK**：`tools/host_mod.py`
-   - 寫入新角色、Recode、EXP 上限和 patchData，再依 `server/buddies.json` 加上小跟班規則
-   - 重新編譯 `.pyc` 後簽名
-3. **圖片**：`tools/make_images.py`
-   - 依 `images.json` 用同名長度的原始檔當模板，產生加密的 `.bin`
-   - 產出的資料夾合併進玩家的 gdresources，打包成 tar 後在 reTBHost 匯入
+1. **Game APK** (`tools/terra_mod.py build`)
+   - Applies `mods/*.json` in file-name order: skills first, then companions, then characters.
+   - Recomputes the integrity hashes and registers the new images in the built-in AssetVersions index.
+   - Applies any native patches a spec lists, then aligns and signs the APK.
+   - `--dump` writes the modded databases, which step 2 needs.
+2. **Server APK** (`tools/host_mod.py`)
+   - Adds the new characters, recodes, EXP caps and patchData.
+   - Adds the companion rules from `server/buddies.json` and recompiles the changed `.pyc` files.
+   - Signs the APK.
+3. **Images** (`tools/make_images.py`)
+   - Builds the encrypted `.bin` files listed in `images.json`. Each one uses an original file whose name has the same length as a template.
+   - Merge the output into the player's gdresources, pack it as a tar, and import it in reTBHost.
 
-可選：`tools/edit_save.py` 修改 reTBHost 匯出存檔的角色等級。
+Optional: `tools/edit_save.py` sets a character's level in a reTBHost account export.
 
-> 兩個 APK 的簽名與官方不同，玩家必須先在 reTBHost **匯出帳號**，再移除原版、安裝模組版，最後匯入 tar 和存檔。
+> Both APKs are signed with your own key, so they cannot be installed over the official builds. Players must **export their account** in reTBHost first, uninstall the originals, install the modded APKs, then import the gdresources tar and the account.
 
-## 新增內容
+## Making your own content
 
-撰寫規格見 [`docs/MOD_SPEC.md`](docs/MOD_SPEC.md)。開始前務必讀 [`docs/INTERNALS.md`](docs/INTERNALS.md) 的「陷阱」一節，裡面每一條都曾造成卡死或圖片空白。
+- [`docs/MOD_SPEC.md`](docs/MOD_SPEC.md) describes every spec field.
+- [`docs/INTERNALS.md`](docs/INTERNALS.md) documents how the game works under the hood. **Read its "Pitfalls" section first.** Each item in it once froze the game or left an image blank.
+- `tools/analysis/` holds the reverse-engineering helpers: symbol maps, annotated disassembly, call graphs, string literals and texture export.
 
-## 目錄
+## Layout
 
 ```
-tools/            建置工具（terra_mod / host_mod / make_images / edit_save 與函式庫）
-tools/analysis/   逆向分析輔助（符號表、反組譯、呼叫圖、字串常量、貼圖匯出）
-native/           libetc2 / liblz4 編譯腳本
-mods/             mod 規格 JSON（每個檔案一組內容）
-images.json       圖片產生清單（make_images 用）
-art/              你的圖片（不納入 repo）
-server/           伺服器端小跟班規則
-docs/             規格與內部機制文件
+tools/            build tools (terra_mod, host_mod, make_images, edit_save) and libraries
+tools/analysis/   reverse-engineering helpers
+native/           build script for libetc2 / liblz4
+mods/             mod specs, one set of content per file
+images.json       image recipe for make_images
+server/           server-side companion rules
+docs/             spec format and internals
+art/, input/      your own files (not tracked)
 ```
 
-## 授權
+## License
 
-程式碼以 MIT 授權釋出（見 `LICENSE`）。Terra Battle 及其素材的權利屬於原權利人；本專案僅供私人伺服器的同好研究使用，請勿散布遊戲本體或素材。
+The code is released under the MIT License (see `LICENSE`). Terra Battle and all of its assets belong to their respective owners. This project is a fan-made tool for private-server use. Do not redistribute game files or assets.

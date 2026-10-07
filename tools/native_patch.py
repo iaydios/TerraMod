@@ -4,7 +4,7 @@ Two opt-in skill features, each switched on only by data in a SkillType, so ever
 original skill keeps its exact behaviour:
 
   * star range  -- SkillType.range == 10 (X) with sx >= 7 also hits the full row
-                   and column (a "米" / 8-way pattern to the board edges).
+                   and column (an 8-way star pattern reaching the board edges).
                    Patch: BattleManager.IterateX cell test.
   * random power -- SkillType.successRate == 4242 (a field only status skills read) multiplies the skill damage by
                    a weighted random step (MULT_BASE + MULT_STEP*k, see MULT_PROBS), drawn with GameRandom.Range (the game's synced RNG).
