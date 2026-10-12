@@ -8,20 +8,24 @@ Two targets, same edits:
         --buddies ../server/buddies.json --out reTB-Host-mod.apk --keystore terramod.keystore
 
   reTB folder (server running on a PC, e.g. reTBpc or a plain reTB checkout):
-    python3 host_mod.py --retb-folder C:/path/to/reTB --chrdb <modded ChrDatabase.json> --new-chr 1289 \
-        --buddies ../server/buddies.json
+    python3 host_mod.py --retb-folder C:/path/to/reTB --out C:/path/to/reTB-mod \
+        --chrdb <modded ChrDatabase.json> --new-chr 1289 --buddies ../server/buddies.json
+    copies the folder to --out and patches the copy, leaving the source untouched;
+    without --out the folder itself is patched in place
 
 Edits (tb_server/data): rebirth_map.json, chr_to_jobs.json, chr_names.json, chr_rarity.json,
 chr_to_species.json, joblevel_exp_caps.json, patchData.zip (chrInfos + chrdata), buddydb_full.json;
 (tb_server/handlers/userdata): buddy.py, buddy_consts.py, buddy_helpers.py.
 APK mode then recompiles the .pyc, updates chaquopy build.json, aligns and signs.
-Folder mode writes the files in place (originals kept as *.terramod-orig) and needs no signing.
+Folder mode patches plain files and needs no signing: with --out it works on a fresh copy of
+the folder; without --out it patches the folder itself (originals kept as *.terramod-orig).
 """
 import argparse
 import hashlib
 import io
 import json
 import os
+import shutil
 import struct
 import subprocess
 import tempfile
@@ -297,6 +301,17 @@ def write_aligned(entries, path):
 ORIG_SUFFIX = ".terramod-orig"
 
 
+def copy_retb(src, dst, log):
+    """Rebuild dst as a copy of the src reTB tree, so the patch lands in generated output."""
+    src, dst = os.path.abspath(src), os.path.abspath(dst)
+    if dst == src or dst.startswith(src + os.sep):
+        raise SystemExit(f"--out {dst} is inside the reTB folder {src} - pick a destination outside it")
+    if os.path.exists(dst):
+        shutil.rmtree(dst)  # generated output: rebuild it, so no stale files survive
+    shutil.copytree(src, dst, ignore=shutil.ignore_patterns("__pycache__", ".git"))
+    log.append(f"copied {src} -> {dst} (the source stays untouched; the copy is patched)")
+
+
 def find_tb_servers(folder):
     """Every tb_server package under a reTB folder that the server may import:
     the source tree and any installed copy inside a virtualenv (reTBpc installs one)."""
@@ -361,15 +376,19 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     tgt = ap.add_mutually_exclusive_group(required=True)
     tgt.add_argument("--apk", help="reTB Host APK to patch (server on the phone)")
-    tgt.add_argument("--retb-folder", help="reTB folder to patch in place (server on a PC, e.g. reTBpc's reTB folder)")
+    tgt.add_argument("--retb-folder", help="reTB folder to patch (server on a PC, e.g. reTBpc's reTB folder)")
     ap.add_argument("--chrdb", required=True)
     ap.add_argument("--new-chr", type=int, nargs="+", required=True)
-    ap.add_argument("--out", help="output APK (APK mode)")
+    ap.add_argument("--out", help="output APK (APK mode), or destination folder the reTB folder is copied to "
+                                  "before patching (folder mode; default: patch the folder itself)")
     ap.add_argument("--keystore", help="signing keystore (APK mode; created if missing)")
     ap.add_argument("--buddies", help="JSON list of custom companions for the server (see patch_buddies)")
     a = ap.parse_args()
     log = []
     if a.retb_folder:
+        if a.out:
+            copy_retb(a.retb_folder, a.out, log)
+            a.retb_folder = a.out
         patch_folder(a, log)
         print("\n".join(log))
         return

@@ -63,7 +63,7 @@ sh native/build_native.sh   # once
 sh build_all.sh             # -> out/TerraBattle-mod.apk, out/reTB-Host-mod.apk, out/gdresources/
 ```
 
-`python build_all.py` is a drop-in alternative that **finds the inputs for you**: everything under `input/` is recognized by content, so the file names do not have to match the table above. A gdresources `*.tar` is unpacked once and reused, and a reTB folder (PC server) is patched in place of the reTB Host APK. `--dry-run` shows the plan, `--only game|server|images` selects steps, and the `build_all.sh` environment variables work too. The new character IDs are read from the mod specs, so there is no `NEW_CHR` to keep in sync.
+`python build_all.py` is a drop-in alternative that **finds the inputs for you**: everything under `input/` is recognized by content, so the file names do not have to match the table above. Nothing under `input/` is ever written to: a gdresources `*.tar` is unpacked once into `out/` and reused, and a reTB folder (PC server) stands in for the reTB Host APK by being copied to `out/` and patched there. `--dry-run` shows the plan, `--only game|server|images` selects steps, and the `build_all.sh` environment variables work too. The new character IDs are read from the mod specs, so there is no `NEW_CHR` to keep in sync.
 
 `build_all.sh` runs three steps, which you can also run on their own:
 
@@ -86,19 +86,20 @@ Optional: `tools/edit_save.py` sets a character's level in a reTBHost account ex
 
 ## Playing with a PC server (reTBpc / reTB folder)
 
-If the server runs on a PC instead of on the phone, you do not need the reTB Host APK. Patch the reTB folder directly:
+If the server runs on a PC instead of on the phone, you do not need the reTB Host APK. Patch a copy of the reTB folder and run the server from it:
 
 ```sh
-python3 tools/host_mod.py --retb-folder /path/to/reTB --chrdb out/dump/ChrDatabase.json \
+python3 tools/host_mod.py --retb-folder /path/to/reTB --out out/reTB --chrdb out/dump/ChrDatabase.json \
     --new-chr 1289 --buddies server/buddies.json
 ```
 
 - `--chrdb` is the modded database that `terra_mod.py build --dump out/dump` writes.
-- The command makes the same server edits as the APK mode, but in place: no signing, no `.pyc` compile.
-- It finds every `tb_server` package under the folder, including the copy that **reTBpc installs into `reTB/.venv/.../site-packages`**. That installed copy is the one the server actually runs, so it is patched too.
+- The command makes the same server edits as the APK mode, on plain files: no signing, no `.pyc` compile.
+- With `--out` the folder is **copied there first and the copy is patched**, leaving the source untouched. Without `--out` the folder itself is patched in place. `build_all.py` always passes `--out` (default `out/<folder name>`).
+- It finds every `tb_server` package under the folder, including the copy that **reTBpc installs into `reTB/.venv/.../site-packages`**. That installed copy is the one the server actually runs, so the copy in `--out` includes it, patched too.
 - Each original file is kept next to it as `*.terramod-orig`. Re-running always starts from those originals, so it is safe to run again after changing your specs.
-- Restart the server afterwards.
-- **A server update in reTBpc replaces the patched files.** Run the command again after updating.
+- Restart the server (from the patched copy) afterwards.
+- **A server update in reTBpc changes the source tree.** Re-run the command afterwards to refresh the copy.
 
 The phones still need the modded **game** APK, since the new characters and skills live in the client. They do not need the modded reTB Host APK. The images go into the gdresources folder that the PC server serves: copy the `.bin` files from `out/gdresources/` into it. No tar is needed.
 
@@ -120,16 +121,6 @@ server/           server-side companion rules
 docs/             spec format and internals
 art/, input/      your own files (not tracked)
 ```
-
-## A note from the author
-
-Thanks to **Yami_nK** and **Guigeek** ([Terra-Tools](https://github.com/Guigeekun/Terra-Tools)) for their help. Thanks as well to Claude, and to Terra Battle itself.
-
-Terra Battle was my favorite game. I played it right up to the day it shut down, but I never got the chance to see my Ma'curi receive a DNA Recode. That seed stayed with me all this time. Now, after a lot of effort, I've managed to create what I always dreamed of, at least half-successfully (?).
-
-I hope everyone who truly loves Terra Battle, and everyone who is about to, will join in and create the characters they've always imagined.
-
-Once again, my sincere thanks to both of you for your help.
 
 ## A Note from the Author
 
