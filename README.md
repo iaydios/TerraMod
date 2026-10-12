@@ -122,16 +122,6 @@ docs/             spec format and internals
 art/, input/      your own files (not tracked)
 ```
 
-## A note from the author
-
-Thanks to **Yami_nK** and **Guigeek** ([Terra-Tools](https://github.com/Guigeekun/Terra-Tools)) for their help. Thanks as well to Claude, and to Terra Battle itself.
-
-Terra Battle was my favorite game. I played it right up to the day it shut down, but I never got the chance to see my Ma'curi receive a DNA Recode. That seed stayed with me all this time. Now, after a lot of effort, I've managed to create what I always dreamed of, at least half-successfully (?).
-
-I hope everyone who truly loves Terra Battle, and everyone who is about to, will join in and create the characters they've always imagined.
-
-Once again, my sincere thanks to both of you for your help.
-
 ## A Note from the Author
 
 Thanks to **Yami_nK** and **Guigeek** ([Terra-Tools](https://github.com/Guigeekun/Terra-Tools)) for their help. And of course to Claude, and to Terra Battle itself.
