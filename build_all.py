@@ -7,18 +7,20 @@
 Same three steps as build_all.sh (select with --only game|server|images):
 
   1. game APK    tools/terra_mod.py build  -> out/TerraBattle-mod.apk (+ out/dump/)
-  2. server      tools/host_mod.py         -> out/reTB-Host-mod.apk and/or a reTB
-                                              folder patched in place (PC server)
+  2. server      tools/host_mod.py         -> out/reTB-Host-mod.apk and/or out/<reTB folder>
+                                              (a patched copy of the PC-server tree)
   3. images      tools/make_images.py      -> out/gdresources/
 
-Inputs are found under input/ by CONTENT, so their file names do not matter:
+Inputs are found under input/ by CONTENT, so their file names do not matter - and input/ is
+never written to: every generated file lands in out/.
 
   game APK       a .apk holding assets/bin/Data/data.unity3d
   reTB Host APK  a .apk holding assets/chaquopy/app.imy
-  reTB folder    a folder with a tb_server package inside (patched in place)
+  reTB folder    a folder with a tb_server package inside (copied to out/, patch applied
+                 to the copy)
   game data      a folder with ChrDatabase/SkillData/EffectSet/BuddyDatabase .json
   gdresources    a folder with data_u2017/ inside - or a *.tar holding one,
-                 unpacked once next to it and reused on later runs
+                 unpacked once into out/ and reused on later runs
 
 Explicit flags (--game-apk --host-apk --base --gdres --retb-folder) and the
 build_all.sh environment variables (GAME_APK HOST_APK BASE GDRES RETB_FOLDER
@@ -107,15 +109,15 @@ def find_game_data(input_dir):
     return None
 
 
-def find_gdres(input_dir, dry=False):
-    """A folder holding data_u2017/, unpacking a gdresources *.tar once if that is all there is."""
+def find_gdres(input_dir, out_dir, dry=False):
+    """A folder holding data_u2017/, unpacking a gdresources *.tar once (into out_dir) if that is all there is."""
     tars = []
     for dirpath, dirnames, files in walk_inputs(input_dir):
         if "data_u2017" in dirnames:
             return dirpath
         tars += [os.path.join(dirpath, f) for f in files if f.lower().endswith((".tar", ".tar.gz", ".tgz"))]
     for tar in sorted(tars):
-        dst = os.path.join(input_dir, os.path.basename(tar).split(".")[0] + ".unpacked")
+        dst = os.path.join(out_dir, os.path.basename(tar).split(".")[0] + ".unpacked")
         if not any("data_u2017" in d for _dp, d, _f in walk_inputs(dst)):
             with tarfile.open(tar, "r:*") as t:
                 if not any("data_u2017" in m.name for m in t):
@@ -224,8 +226,9 @@ def main():
     game_apk = a.game_apk or (only_one(game_apks, "game APK", "--game-apk") if need_game_apk else None)
     host_apk = a.host_apk or (only_one(host_apks, "reTB Host APK", "--host-apk") if need_server else None)
     retb = a.retb_folder or (find_retb_folder(a.input) if need_server else None)
+    retb_out = os.path.join(a.out, os.path.basename(os.path.normpath(retb))) if retb else None
     base = a.base or (find_game_data(a.input) if need_base else None)
-    gdres = a.gdres or (find_gdres(a.input, a.dry_run) if need_gdres else None)
+    gdres = a.gdres or (find_gdres(a.input, a.out, a.dry_run) if need_gdres else None)
     for what, val, wanted in (("game APK", game_apk, need_game_apk), ("reTB Host APK", host_apk, need_server),
                               ("reTB folder", retb, need_server), ("game data", base, need_base),
                               ("gdresources", gdres, need_gdres)):
@@ -267,9 +270,9 @@ def main():
                 run_tool("host_mod.py", ["--apk", host_apk, "--out", host_out,
                                          "--keystore", a.keystore, *common], a.dry_run)
             if retb:
-                run_tool("host_mod.py", ["--retb-folder", retb, *common], a.dry_run)
+                run_tool("host_mod.py", ["--retb-folder", retb, "--out", retb_out, *common], a.dry_run)
                 if not a.dry_run:
-                    note("restart the PC server to load the patched files")
+                    note(f"the patched PC-server tree is {retb_out} - (re)start the server from it")
 
     if "images" in only:
         recipe = None
@@ -288,7 +291,7 @@ def main():
                                         "--out", os.path.join(a.out, "gdresources")], a.dry_run)
 
     print()
-    for f in (game_out, host_out, os.path.join(a.out, "gdresources")):
+    for f in filter(None, (game_out, host_out, retb_out, os.path.join(a.out, "gdresources"))):
         if os.path.exists(f):
             note(f"done: {f}")
     if skipped:
