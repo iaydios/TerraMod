@@ -34,20 +34,25 @@ The repo ships with two example mods:
 
 ## Requirements
 
-- Linux or WSL.
-- Python **3.13**. It must match the Chaquopy Python bundled in reTBHost, because server `.pyc` files are recompiled.
-- `pip install -r requirements.txt`
-- Java (`keytool`), plus Android build-tools `zipalign` and `apksigner.jar` in `build-tools/`. You can point to another folder with `TERRAMOD_BT`.
-- `llvm-mc` and `llvm-objcopy`, only if you use the native patches.
-- The native helpers: run `sh native/build_native.sh` to build `tools/libetc2.so` (ETC2 encoder, wraps etcpak) and `tools/liblz4.so`.
+| Requirement | Details |
+|---|---|
+| OS | Linux or WSL. `build_all.py` also runs natively on Windows. |
+| Python | **3.13**, matching the Chaquopy Python bundled in reTBHost (server `.pyc` files are recompiled). Then `pip install -r requirements.txt`. |
+| Game databases | Download the latest `user-data.zip.00*` pack from the [Terra-Tools releases](https://github.com/Guigeekun/Terra-Tools/releases) (pre-extracted and decrypted game data) and use its `user-data/extracted-gamedata/game_data/` - or run [Terra-Tools](https://github.com/Guigeekun/Terra-Tools) on your own APK. |
+| Java | `keytool` from a JDK; it creates the signing keystore on first run. |
+| Android build tools | `zipalign` and `apksigner.jar` in `build-tools/`, or point `TERRAMOD_BT` at another folder. On Windows, the SDK's `zipalign.exe` and `lib/apksigner.jar` in `build-tools/` work as-is. |
+| Native helpers | `sh native/build_native.sh` builds `tools/libetc2.so` (ETC2 encoder, wraps etcpak) and `tools/liblz4.so`. On Windows any C++11 compiler works; the `.so` names load fine as DLLs. |
+| Native patches (optional) | `llvm-mc` and `llvm-objcopy`, only if a mod spec uses `native`. |
 
 ## Inputs (put them in `input/`)
+
+The names below are what `build_all.sh` expects; `build_all.py` does not care about them and checks file content instead.
 
 | Path | Source |
 |---|---|
 | `TerraBattle.apk` | The original reTB game APK (arm64) |
 | `reTB-Host.apk` | The original reTBHost APK |
-| `game_data/` | reTBHost's extracted game data (`extracted-gamedata/game_data/`). The build needs `ChrDatabase.json`, `SkillData.json`, `EffectSet.json` and `BuddyDatabase.json`, and stops unless these re-encode byte-exactly to the data in your APK. |
+| `game_data/` | Game databases from [Terra-Tools](https://github.com/Guigeekun/Terra-Tools/releases): take `user-data/extracted-gamedata/game_data/` from the latest `user-data` pack (or extract your APK with Terra-Tools). The build needs `ChrDatabase.json`, `SkillData.json`, `EffectSet.json` and `BuddyDatabase.json`, and stops unless these re-encode byte-exactly to the data in your APK. |
 | `gdresources/` | Your original gdresources folder, used as image templates |
 | `art/` | Your new PNG / JPEG images, as listed in `images.json` |
 
@@ -57,6 +62,8 @@ The repo ships with two example mods:
 sh native/build_native.sh   # once
 sh build_all.sh             # -> out/TerraBattle-mod.apk, out/reTB-Host-mod.apk, out/gdresources/
 ```
+
+`python build_all.py` is a drop-in alternative that **finds the inputs for you**: everything under `input/` is recognized by content, so the file names do not have to match the table above. A gdresources `*.tar` is unpacked once and reused, and a reTB folder (PC server) is patched in place of the reTB Host APK. `--dry-run` shows the plan, `--only game|server|images` selects steps, and the `build_all.sh` environment variables work too. The new character IDs are read from the mod specs, so there is no `NEW_CHR` to keep in sync.
 
 `build_all.sh` runs three steps, which you can also run on their own:
 

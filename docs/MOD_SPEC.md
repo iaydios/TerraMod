@@ -1,6 +1,6 @@
 # Mod spec format
 
-Each file in `mods/*.json` is applied in file-name order. A file may contain `skills`, `buddies`, `characters`, `asset_db`, `asset_versions` and `native`. Inside a file, skills are applied first so characters and buddies can reference them as `"@key"`. Text fields take either a string (English) or `{"en","ja","fr","de","es","zh_tw"}`. Missing languages fall back to English.
+Each file in `mods/*.json` is applied in file-name order. A file may contain `skills`, `buddies`, `characters`, `asset_db`, `asset_versions` and `native`. Inside a file, skills are applied first so characters and buddies can reference them as `"@key"`. Text fields take either a string (English) or `{"en","ja","fr","de","es","zh_tw"}`. Missing languages fall back to English. Floats (`HPcoeff`, `power`, ...) are rounded to the stored float32 precision, so `1.1` is fine.
 
 ## skills[]
 

@@ -40,7 +40,11 @@ def patch_app(files, chrdb, new_ids, log):
     jobs = {j["ID"]: j for j in chrdb["data"]}
     load = lambda n: json.loads(files[D + n].decode("utf-8"))
     rb, c2j, names = load("rebirth_map.json"), load("chr_to_jobs.json"), load("chr_names.json")
-    rar, spe, caps = load("chr_rarity.json"), load("chr_to_species.json"), load("joblevel_exp_caps.json")
+    caps = load("joblevel_exp_caps.json")
+    # chr_rarity / chr_to_species came later: older server copies (e.g. an installed
+    # site-packages snapshot) do not ship them and do not read them - patch what is there
+    rar = load("chr_rarity.json") if D + "chr_rarity.json" in files else None
+    spe = load("chr_to_species.json") if D + "chr_to_species.json" in files else None
     pz = zipfile.ZipFile(io.BytesIO(files[D + "patchData.zip"]))
     patch = json.loads(pz.read("patchRawData.json"))
     p_infos, p_chr = patch["chrDatabase"]["chrInfos"], patch["chrDatabase"]["chrdata"]
@@ -51,8 +55,10 @@ def patch_app(files, chrdb, new_ids, log):
         job0 = jobs[info["Jobs"][0]]
         c2j[str(cid)] = info["Jobs"]
         names[str(cid)] = info["NameString"]["en"]
-        rar[str(cid)] = info["rarity"]
-        spe[str(cid)] = job0["Species"]
+        if rar is not None:
+            rar[str(cid)] = info["rarity"]
+        if spe is not None:
+            spe[str(cid)] = job0["Species"]
         for jid in info["Jobs"]:
             # EXP cap: same curve as a job with identical EXPmax/EXPcoeff, else scale
             same = [k for k, j in jobs.items() if k != jid and str(k) in caps
@@ -91,7 +97,8 @@ def patch_app(files, chrdb, new_ids, log):
     files[D + "rebirth_map.json"] = json.dumps(rb, ensure_ascii=False).encode()
     for n, o in (("chr_to_jobs.json", c2j), ("chr_names.json", names), ("chr_rarity.json", rar),
                  ("chr_to_species.json", spe), ("joblevel_exp_caps.json", caps)):
-        files[D + n] = json.dumps(o, ensure_ascii=False, indent=2).encode()
+        if o is not None:
+            files[D + n] = json.dumps(o, ensure_ascii=False, indent=2).encode()
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as out:
         out.writestr(pz.infolist()[0], compact(patch).encode())

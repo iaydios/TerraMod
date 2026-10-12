@@ -1,10 +1,12 @@
 #!/bin/sh
 # One-shot build of everything a player needs. Edit the paths below, then: sh build_all.sh
+# The Python alternative, python build_all.py, finds these inputs by content under
+# input/ - so the file names there can differ (it also patches a reTB PC-server folder).
 #
 #   GAME_APK   original reTB Terra Battle APK (arm64)
 #   HOST_APK   original reTBHost APK
 #   BASE       folder with ChrDatabase.json / SkillData.json / EffectSet.json / BuddyDatabase.json
-#              (reTBHost "extracted-gamedata/game_data", see README)
+#              (Terra-Tools "user-data/extracted-gamedata/game_data", see README)
 #   GDRES      your original gdresources folder (image templates)
 #   NEW_CHR    IDs of the new characters defined in mods/*.json
 set -e

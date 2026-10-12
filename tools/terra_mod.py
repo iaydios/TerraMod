@@ -42,6 +42,12 @@ def langs(v):
     return out
 
 
+def f32(v):
+    """Round to float32, the precision the databases store, so specs can write 1.1
+    and the re-read verification (which compares exactly) still passes."""
+    return struct.unpack("<f", struct.pack("<f", v))[0]
+
+
 # ---------------------------------------------------------------- mod application
 def apply_character(db, spec, log):
     infos = {i["ID"]: i for i in db["infos"]}
@@ -72,7 +78,7 @@ def apply_character(db, spec, log):
         for k, v in jspec.get("fields", {}).items():
             if k not in job:
                 raise KeyError(f"unknown job field {k}")
-            job[k] = v
+            job[k] = f32(v) if isinstance(job[k], float) else v
         st = jspec.get("stats")
         if st:
             for s in ("HP", "ATK", "DEF", "SATK", "SDEF"):
@@ -127,7 +133,7 @@ def apply_skill(sdb, spec, keys, log):
         if k not in sk or k.endswith("String"):
             raise KeyError(f"unknown/invalid skill field {k}")
         if isinstance(sk[k], float):
-            v = float(v)
+            v = f32(v)
         sk[k] = v
     for k, fld in (("name", "nameString"), ("desc", "descString"), ("range", "rangePrefixString")):
         if k in spec:
@@ -165,7 +171,7 @@ def apply_buddy(bdb, spec, keys, log):
         b["DescString"] = langs(spec["desc"])
     for k in BUDDY_FIELDS_DIRECT:
         if k in spec:
-            b[k] = spec[k]
+            b[k] = f32(spec[k]) if isinstance(b[k], float) else spec[k]
     if "image_id" in spec:
         b["ImageID"] = spec["image_id"]
     if "skill" in spec:
