@@ -1,0 +1,1099 @@
+{
+ "_note": "Gugba Lambda (1291), self-contained native module gugba_native.  Marks: 4801 Out of the Way, 4802 Whiskey (+1..+4 hidden stat skills), 4830 Rhythm Headbutt (+1 hidden use counter), buddy 500 Grandma's Will: tap 4806 (+1 fist 4805, +2 used 4807, +3 stun 4808, +4 'Enough...' 4809, +5 DEF-99% 4810).",
+ "skills": [
+  {
+   "key": "out_of_my_way",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 6,
+    "iconNo": 88,
+    "nameString": {
+     "en": "Out of the Way",
+     "ja": "どけどけ",
+     "fr": "Out of the Way",
+     "de": "Out of the Way",
+     "es": "Out of the Way",
+     "zh_tw": "別擋路"
+    },
+    "descString": {
+     "en": "He charges through everything, and whatever stands in the way gets knocked aside. Can push every block except Bosses.",
+     "ja": "猪突猛進、道を塞ぐものはすべて弾き飛ばす。ボス以外のすべてのブロックを押せる。",
+     "fr": "He charges through everything, and whatever stands in the way gets knocked aside. Can push every block except Bosses.",
+     "de": "He charges through everything, and whatever stands in the way gets knocked aside. Can push every block except Bosses.",
+     "es": "He charges through everything, and whatever stands in the way gets knocked aside. Can push every block except Bosses.",
+     "zh_tw": "橫衝直撞，擋路的全被撞開。可推動所有方塊（Boss除外）。"
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4801
+   }
+  },
+  {
+   "key": "whiskey",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 1,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 140,
+    "nameString": {
+     "en": "Whiskey",
+     "ja": "ウイスキー",
+     "fr": "Whiskey",
+     "de": "Whiskey",
+     "es": "Whiskey",
+     "zh_tw": "威士忌"
+    },
+    "descString": {
+     "en": "Home-brewed whiskey: the more he drinks, the stronger he gets. On a pincer: each drink raises one random stat of ATK, DEF, MATK or MDEF by 25% (4 drinks per stat). Any damage taken resets them all.",
+     "ja": "自家製ウイスキー、飲むほどに力が湧く。挟撃時に発動。1杯ごとに攻撃・防御・魔攻・魔防のいずれかがランダムで25%上昇（各4杯まで）。ダメージを受けると全てリセット。",
+     "fr": "Home-brewed whiskey: the more he drinks, the stronger he gets. On a pincer: each drink raises one random stat of ATK, DEF, MATK or MDEF by 25% (4 drinks per stat). Any damage taken resets them all.",
+     "de": "Home-brewed whiskey: the more he drinks, the stronger he gets. On a pincer: each drink raises one random stat of ATK, DEF, MATK or MDEF by 25% (4 drinks per stat). Any damage taken resets them all.",
+     "es": "Home-brewed whiskey: the more he drinks, the stronger he gets. On a pincer: each drink raises one random stat of ATK, DEF, MATK or MDEF by 25% (4 drinks per stat). Any damage taken resets them all.",
+     "zh_tw": "私釀威士忌，越喝越有勁。夾擊時發動：每杯隨機讓攻擊、防禦、魔攻、魔防其中一項提升25%（每項最多4杯），受到任何傷害就全部歸零。"
+    },
+    "rangePrefixString": {
+     "en": "Self",
+     "ja": "自身",
+     "fr": "Self",
+     "de": "Self",
+     "es": "Self",
+     "zh_tw": "自身"
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 30,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4802
+   }
+  },
+  {
+   "key": "whiskey_1",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 5,
+    "iconNo": 3,
+    "nameString": {
+     "en": "Whiskey (ATK)",
+     "ja": "ウイスキー（攻撃）",
+     "fr": "Whiskey (ATK)",
+     "de": "Whiskey (ATK)",
+     "es": "Whiskey (ATK)",
+     "zh_tw": "威士忌（攻擊）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "whiskey_2",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 6,
+    "iconNo": 4,
+    "nameString": {
+     "en": "Whiskey (DEF)",
+     "ja": "ウイスキー（防御）",
+     "fr": "Whiskey (DEF)",
+     "de": "Whiskey (DEF)",
+     "es": "Whiskey (DEF)",
+     "zh_tw": "威士忌（防禦）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "whiskey_3",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 7,
+    "iconNo": 24,
+    "nameString": {
+     "en": "Whiskey (MATK)",
+     "ja": "ウイスキー（魔攻）",
+     "fr": "Whiskey (MATK)",
+     "de": "Whiskey (MATK)",
+     "es": "Whiskey (MATK)",
+     "zh_tw": "威士忌（魔攻）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "whiskey_4",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 8,
+    "iconNo": 26,
+    "nameString": {
+     "en": "Whiskey (MDEF)",
+     "ja": "ウイスキー（魔防）",
+     "fr": "Whiskey (MDEF)",
+     "de": "Whiskey (MDEF)",
+     "es": "Whiskey (MDEF)",
+     "zh_tw": "威士忌（魔防）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "quake_slash",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 1,
+    "effEmitCondition": 2,
+    "counterFilter": 1,
+    "kind": 3,
+    "status": 38,
+    "iconNo": 28,
+    "nameString": {
+     "en": "Quake Slash",
+     "ja": "地震斬り",
+     "fr": "Quake Slash",
+     "de": "Quake Slash",
+     "es": "Quake Slash",
+     "zh_tw": "地震斬"
+    },
+    "descString": {
+     "en": "One downward stroke and the earth splits open. Sweeps 3 rows and weighs the foes down with gravity.",
+     "ja": "剣を振り下ろせば、大地が裂ける。横3列を薙ぎ払い、重力で押さえつける。",
+     "fr": "One downward stroke and the earth splits open. Sweeps 3 rows and weighs the foes down with gravity.",
+     "de": "One downward stroke and the earth splits open. Sweeps 3 rows and weighs the foes down with gravity.",
+     "es": "One downward stroke and the earth splits open. Sweeps 3 rows and weighs the foes down with gravity.",
+     "zh_tw": "一劍劈下，大地隨之崩裂。橫掃3列敵人，並使其受到重力壓制。"
+    },
+    "rangePrefixString": {
+     "en": "3 Rows",
+     "ja": "横3列",
+     "fr": "3 Rows",
+     "de": "3 Rows",
+     "es": "3 Rows",
+     "zh_tw": "橫3列"
+    },
+    "weap": 1,
+    "attrib": 0,
+    "range": 1,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 30,
+    "power": 3.0,
+    "spower": 2.0,
+    "successRate": 75,
+    "effID": 31,
+    "life": 2,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "rhythm_headbutt",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 1,
+    "effEmitCondition": 2,
+    "counterFilter": 1,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 34,
+    "nameString": {
+     "en": "Rhythm Headbutt",
+     "ja": "リズム頭突き",
+     "fr": "Rhythm Headbutt",
+     "de": "Rhythm Headbutt",
+     "es": "Rhythm Headbutt",
+     "zh_tw": "節奏頭槌"
+    },
+    "descString": {
+     "en": "He re-enacts the clumsy dance steps from the tavern. To bystanders it looks like a joke, but not to the enemy. On a pincer: deals physical damage equal to 1.0x ATK, and every use adds another 1.0x ATK with no limit for the rest of the battle. The next battle starts again at 1.0x.",
+     "ja": "酒場での不格好なステップを再現する。周りには冗談に見えるが、敵の目にはそうは映らない。挟撃時に発動。攻撃力の1.0倍の物理ダメージを与え、使うたびにさらに1.0倍ずつ増える。同じ戦闘中は上限なし、次の戦闘では最初に戻る。",
+     "fr": "He re-enacts the clumsy dance steps from the tavern. To bystanders it looks like a joke, but not to the enemy. On a pincer: deals physical damage equal to 1.0x ATK, and every use adds another 1.0x ATK with no limit for the rest of the battle. The next battle starts again at 1.0x.",
+     "de": "He re-enacts the clumsy dance steps from the tavern. To bystanders it looks like a joke, but not to the enemy. On a pincer: deals physical damage equal to 1.0x ATK, and every use adds another 1.0x ATK with no limit for the rest of the battle. The next battle starts again at 1.0x.",
+     "es": "He re-enacts the clumsy dance steps from the tavern. To bystanders it looks like a joke, but not to the enemy. On a pincer: deals physical damage equal to 1.0x ATK, and every use adds another 1.0x ATK with no limit for the rest of the battle. The next battle starts again at 1.0x.",
+     "zh_tw": "重現在酒館的愚鈍舞步，在旁人看起來是玩笑，但在敵人的眼裡不是如此。夾擊時發動：造成1.0倍攻擊的物理傷害，每發動一次傷害增加1.0倍，同一場戰鬥內沒有上限，下一場戰鬥歸零重新開始。"
+    },
+    "rangePrefixString": {
+     "en": "Single",
+     "ja": "単体",
+     "fr": "Single",
+     "de": "Single",
+     "es": "Single",
+     "zh_tw": "單體"
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 1,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 30,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 99,
+    "life": 0,
+    "capacity": 4830
+   }
+  },
+  {
+   "key": "rhythm_headbutt_count",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 0,
+    "iconNo": 92,
+    "nameString": {
+     "en": "Rhythm Headbutt (count)",
+     "ja": "リズム頭突き（回数）",
+     "fr": "Rhythm Headbutt (count)",
+     "de": "Rhythm Headbutt (count)",
+     "es": "Rhythm Headbutt (count)",
+     "zh_tw": "節奏頭槌（連擊數）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 0
+   }
+  },
+  {
+   "key": "grandma_tap",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 1,
+    "counterFilter": 0,
+    "kind": 20,
+    "status": 117,
+    "iconNo": 141,
+    "nameString": {
+     "en": "Grandma's Will",
+     "ja": "おばあちゃんの意志",
+     "fr": "Grandma's Will",
+     "de": "Grandma's Will",
+     "es": "Grandma's Will",
+     "zh_tw": "奶奶的意志"
+    },
+    "descString": {
+     "en": "Dear grandson, you can't just stand there taking hits~ Tap Gugba: foes' DEF is reduced and the next pincer becomes a Doom Strike that hits harder the more times he has been hit, the harder it hits. Once per battle.",
+     "ja": "孫よ、殴られてばかりじゃいけないよ〜。ググバをタップ：敵の防御が低下し、次の挟撃は滅びの一撃に変わる。殴られた回数が多いほど強い。1戦闘に1回だけ。",
+     "fr": "Dear grandson, you can't just stand there taking hits~ Tap Gugba: foes' DEF is reduced and the next pincer becomes a Doom Strike that hits harder the more times he has been hit, the harder it hits. Once per battle.",
+     "de": "Dear grandson, you can't just stand there taking hits~ Tap Gugba: foes' DEF is reduced and the next pincer becomes a Doom Strike that hits harder the more times he has been hit, the harder it hits. Once per battle.",
+     "es": "Dear grandson, you can't just stand there taking hits~ Tap Gugba: foes' DEF is reduced and the next pincer becomes a Doom Strike that hits harder the more times he has been hit, the harder it hits. Once per battle.",
+     "zh_tw": "金孫，不能光被挨打呀~點擊格古巴：敵人的防禦降低，下一次夾擊化為毀滅一擊，被打越多次，傷害越高。每場戰鬥限一次。"
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 1,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 7,
+    "emitRatio": 1,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 34,
+    "life": 1,
+    "capacity": 4806
+   }
+  },
+  {
+   "key": "grandma_fist",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 1,
+    "effEmitCondition": 2,
+    "counterFilter": 1,
+    "kind": 3,
+    "status": 3,
+    "iconNo": 34,
+    "nameString": {
+     "en": "Grandma's Will (Doom Strike)",
+     "ja": "おばあちゃんの意志（滅びの一撃）",
+     "fr": "Grandma's Will (Doom Strike)",
+     "de": "Grandma's Will (Doom Strike)",
+     "es": "Grandma's Will (Doom Strike)",
+     "zh_tw": "奶奶的意志（毀滅一擊）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 1.0,
+    "successRate": 100,
+    "effID": 99,
+    "life": 2,
+    "capacity": 4805
+   }
+  },
+  {
+   "key": "grandma_used",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 0,
+    "iconNo": 34,
+    "nameString": {
+     "en": "Grandma's Will (used)",
+     "ja": "おばあちゃんの意志（発動済み）",
+     "fr": "Grandma's Will (used)",
+     "de": "Grandma's Will (used)",
+     "es": "Grandma's Will (used)",
+     "zh_tw": "奶奶的意志（已發動）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 1.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4807
+   }
+  },
+  {
+   "key": "grandma_stun",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 3,
+    "iconNo": 34,
+    "nameString": {
+     "en": "Grandma's Will (Stun)",
+     "ja": "おばあちゃんの意志（気絶）",
+     "fr": "Grandma's Will (Stun)",
+     "de": "Grandma's Will (Stun)",
+     "es": "Grandma's Will (Stun)",
+     "zh_tw": "奶奶的意志（暈眩）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 1.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4808
+   }
+  },
+  {
+   "key": "grandma_enough",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 0,
+    "iconNo": 141,
+    "nameString": {
+     "en": "Enough…",
+     "ja": "もう、たくさんだ…",
+     "fr": "Enough…",
+     "de": "Enough…",
+     "es": "Enough…",
+     "zh_tw": "夠了…"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 1.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4809
+   }
+  },
+  {
+   "key": "grandma_defdown",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 6,
+    "iconNo": 4,
+    "nameString": {
+     "en": "Grandma's Will (Break)",
+     "ja": "おばあちゃんの意志（破防）",
+     "fr": "Grandma's Will (Break)",
+     "de": "Grandma's Will (Break)",
+     "es": "Grandma's Will (Break)",
+     "zh_tw": "奶奶的意志（破防）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": -99.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4810
+   }
+  }
+ ],
+ "buddies": [
+  {
+   "id": 500,
+   "raw": {
+    "NameString": {
+     "en": "Moon Soul",
+     "ja": "月魂",
+     "fr": "Moon Soul",
+     "de": "Moon Soul",
+     "es": "Moon Soul",
+     "zh_tw": "月魂"
+    },
+    "DescString": {
+     "en": "A keepsake left by Grandma. Each time its bearer is bullied, it quietly stores up strength, until patience runs out and it all bursts forth at once.",
+     "ja": "おばあちゃんの形見。いじめられるたびに静かに力を溜め、堪忍袋の緒が切れたとき、一気に爆発する。",
+     "fr": "A keepsake left by Grandma. Each time its bearer is bullied, it quietly stores up strength, until patience runs out and it all bursts forth at once.",
+     "de": "A keepsake left by Grandma. Each time its bearer is bullied, it quietly stores up strength, until patience runs out and it all bursts forth at once.",
+     "es": "A keepsake left by Grandma. Each time its bearer is bullied, it quietly stores up strength, until patience runs out and it all bursts forth at once.",
+     "zh_tw": "奶奶留下的遺物。每當被欺負的時候，便默默積蓄一分力量，直到忍無可忍之時，一口氣全數爆發。"
+    },
+    "sortNameJa": "ツキダマ",
+    "ID": 500,
+    "SortID": 507,
+    "exclusiveChrID": 1291,
+    "exclusiveSpeciesID": 0,
+    "rarity": 8,
+    "type": 9,
+    "attrib": 6,
+    "kind": 0,
+    "RequiredLevel": 1,
+    "MaxLevel": 1,
+    "ImageID": 523,
+    "ATKmin": 10,
+    "DEFmin": 10,
+    "SATKmin": 10,
+    "SDEFmin": 10,
+    "BOOSTmin": 100,
+    "ATKmax": 10,
+    "DEFmax": 10,
+    "SATKmax": 10,
+    "SDEFmax": 10,
+    "BOOSTmax": 100,
+    "EXPmax": 0,
+    "BaseEXP": 1,
+    "BaseCOIN": 1,
+    "Coeff": 1.0,
+    "EXPcoeff": 2.0999999046325684,
+    "skill": 3875,
+    "evolveID": 0,
+    "coinsToEvolve": 0,
+    "items": [
+     {
+      "code": 0
+     },
+     {
+      "code": 0
+     },
+     {
+      "code": 0
+     }
+    ],
+    "DropLevel": 1,
+    "SameBonusBias": 1,
+    "evolveEnableVer": 0.0,
+    "canDrop": 0,
+    "_cost": 0,
+    "hash": -663417746
+   },
+   "name": {
+    "en": "Moon Soul",
+    "ja": "月魂",
+    "fr": "Moon Soul",
+    "de": "Moon Soul",
+    "es": "Moon Soul",
+    "zh_tw": "月魂"
+   },
+   "skill": "@grandma_tap"
+  }
+ ],
+ "characters": [
+  {
+   "raw": {
+    "info": {
+     "ID": 1291,
+     "NameString": {
+      "en": "Gugba Λ",
+      "ja": "ググバ・Λ",
+      "fr": "Gugba Λ",
+      "de": "Gugba Λ",
+      "es": "Gugba Λ",
+      "zh_tw": "格古巴・Λ"
+     },
+     "sortNameJa": "",
+     "rarity": 8,
+     "unlockChapter": 1,
+     "kind": 2,
+     "chrType": 1,
+     "boostUpValue": 0,
+     "inEvent": 0,
+     "generation": 2,
+     "dropLV": 1,
+     "rebirthFromID": 19,
+     "ancestorChrID": 19,
+     "isLambda": 0,
+     "canDrop": 0,
+     "addProfs": [],
+     "Jobs": [
+      5168
+     ],
+     "plusType": 1
+    },
+    "jobs": [
+     {
+      "ID": 5168,
+      "chrID": 1291,
+      "name": "",
+      "ImageID": 3003,
+      "ImageScale": 0.0,
+      "Gender": 1,
+      "Species": 3,
+      "SkillBoost": 0,
+      "PlusCount": 0,
+      "LV": 1,
+      "HP": 886,
+      "ATK": 53,
+      "DEF": 40,
+      "SATK": 29,
+      "SDEF": 24,
+      "com_EXP": 0,
+      "EXP": 0,
+      "WAIT": 0,
+      "RANGE": 0,
+      "FrameType": 0,
+      "COIN": 20000,
+      "DropJobID": 0,
+      "DropRatio": 0.0,
+      "items": [
+       {
+        "code": 1551
+       },
+       {
+        "code": 8961
+       },
+       {
+        "code": 7171
+       }
+      ],
+      "avoidSleep": 0.0,
+      "avoidPoison": 0.0,
+      "avoidParalyze": 0.0,
+      "avoidConfuse": 0.0,
+      "avoidLoseHeart": 0.0,
+      "avoidStone": 0.0,
+      "avoidDeath": 0.0,
+      "avoidGravity": 0.0,
+      "avoidIced": 0.0,
+      "avoidAddWait": 0.0,
+      "avoidRatioDamage": 0.0,
+      "avoidATKDown": 0.0,
+      "avoidDEFDown": 0.0,
+      "avoidSATKDown": 0.0,
+      "avoidSDEFDown": 0.0,
+      "avoidMove": 0.0,
+      "avoidATKDown2": 0.0,
+      "avoidDEFDown2": 0.0,
+      "avoidSATKDown2": 0.0,
+      "avoidSDEFDown2": 0.0,
+      "IconType": 0,
+      "Attrib": 1,
+      "SkillAttrib": 0,
+      "VS_Species": 0,
+      "VS_power": 0.0,
+      "SkillMask": 0,
+      "SkillSlot": [],
+      "DispSkillSlot": [],
+      "DropSummonID": 0,
+      "DropSummonRatio": 0.0,
+      "DropBuddyID": 0,
+      "DropBuddyRatio": 0.0,
+      "hash": -1700468293,
+      "NameString": {
+       "en": "Gugba Λ",
+       "ja": "ググバ・Λ",
+       "fr": "Gugba Λ",
+       "de": "Gugba Λ",
+       "es": "Gugba Λ",
+       "zh_tw": "格古巴・Λ"
+      },
+      "ProfileString": {
+       "en": "Deep into the night, the \"Rusty Anchor\" tavern in the border town was always filled with smoke, mingled with the smell of cheap malt ale and roasting meat. To most people it was a place where all sorts mixed together, but to Gugba and Burbaba, it was a haven where they could talk about anything.\n\nAs for Burbaba, everyone in town knew about his prized treasure: a sleek, pure-white, futuristic heavy bike that glowed with a sci-fi neon halo. It came with a matching white full-face helmet and a complete set of sharply tailored, high-tech white skin-tight riding gear.\n\nBut that riding suit had a \"dark history.\" When Burbaba first bought it, he put it on with great excitement, only to find that, with his equally round and sturdy build, he was wrapped so tightly in the clinging white rubbery material that not a gap was left. When he rode and swayed, he looked nothing like a sci-fi warrior; he looked like a \"giant magic milk pudding\" jiggling at high speed. Every time he wore it into town, passing children couldn't help pointing and shouting, \"Uncle Pudding!\" In the end, Burbaba could no longer bear the embarrassment, took the suit off, and hung it on the front of the bike as a decoration.\n\nAs for the pool table and dartboard in the corner of the tavern, they bore witness to the two old friends' weekly duel to the death.\n\n\"Listen, Gugba, don't touch my cue with those clumsy claws of yours today. Last time you smashed the cue ball so hard, you knocked the beer mugs off the next table onto the floor.\" Burbaba, a cigarette in his mouth, grinned out of the corner of his eye and patted the bike parked outside the tavern's big window, gleaming with its pristine white tech glow.\n\nGugba scratched his nearly invisible neck in his good-natured way and gave a low chuckle. \"That was an accident, Burbaba. And... today is a bit different.\"\n\n\"Oh? Awfully confident for once. Dare to make a bet?\" Burbaba's interest was piqued. He slapped his chest, his eyes brimming with certainty. \"Best of three! If I win, you buy me and all the guys in this tavern a whole year of grilled skewers and drinks. But if you win... my pure-white futuristic bike and white helmet are all yours!\"\n\nIn Burbaba's mind, it was a bet with no way to lose. He was a famous sharpshooter and pool master in the tavern, and winning meant a year of free food and drink. As for the bike? Even if he lent that big lug ten times the nerve, he didn't think he could win.\n\nThe tavern erupted in cheers and hoots, everyone egging them on, waiting to see how Gugba would pay for a year of grilled meat.\n\nBut the first game was darts. Burbaba threw first and scored well with a nimble flick of his wrist. When it was Gugba's turn, his thick, stubby fingers pinching a dart that looked almost miniature made for a ridiculous sight, and the oxygen-deprived children around him covered their mouths and giggled. But when Gugba settled his mind and dropped his usual goofy expression, the terrifying sense of balance he had honed over years in frigid polar caves and crushing pressure showed itself to the fullest. He casually flicked his arm...\n\n\"Thunk! Thunk! Thunk!\"\nAll three darts struck dead center in the bullseye, even splitting it apart. Burbaba's eyes went wide, and the cigarette nearly fell from his mouth.\n\nThe second game was pool. Burbaba had hoped to claw one back with tricky positioning, but Gugba showed a startling focus that didn't match his appearance. Each shot's force was controlled as precisely and as heavily as a tiny earthquake; the cue ball behaved like an obedient soldier, drawing perfect paths across the table and clearing the object balls one after another.\n\nWon in straight sets. A shutout without a shred of suspense.\n\nThe tavern fell silent for a full three seconds, then burst into thunderous cheers and hollering. Burbaba stood frozen in front of the pool table, turned to stone. He stared at his usually gentle friend, who even made faces to make children laugh, and his mind went blank. He lost? Not only had he failed to win a year of skewers and drinks, he had lost his own treasured bike!\n\n\"...You've been playing dumb this whole time, haven't you?\" Burbaba's mouth twitched. Heartbroken, he slammed the bike key and the white helmet on the table, half laughing, half in tears as he cursed. \"Fine! A bet's a bet! The bike's yours... if only I hadn't bet this, my beloved bike!\"\n\nGugba took the key and the helmet and stroked the cold white metal body with his rough, large hand. He looked at the white riding suit hanging on the front of the bike, the one said to turn people into \"milk pudding,\" and smiled good-naturedly.\n\n\"Um... Burbaba, this suit is too big... I mean, last time I saw you in it, you looked like a white pudding, so I probably couldn't even get one foot in. So how about neither of us wears it?\"\n\nThe moment Burbaba heard the words \"white pudding,\" his old face flushed red, and then he couldn't help it and burst out laughing, doubling over. \"Get lost! Fine, no one wears it! That suit is too embarrassing anyway, so hanging it on the bike as a mascot is just right!\"\n\nGugba awkwardly crammed the white helmet onto his round, nearly neckless head. The sight was the height of absurdity. Burbaba shook his head helplessly and watched his beloved bike disappear over the horizon.",
+       "ja": "夜も更け、国境の町の「錆びた錨亭」はいつものように煙で霞み、安酒の麦芽酒と炙り肉の匂いが混じり合っていた。他の者にとってここは雑多な連中の吹き溜まりだが、ググバとブルババにとっては、何でも語り合える避難所だった。\n\nブルババといえば、町中の誰もが知っている自慢の愛車がある。流線型で、SFのようなネオンの光をまとった純白の未来的な大型バイクだ。同じ白のフルフェイスのヘルメットと、鋭く仕立てられたハイテクな白いライダースーツ一式も揃っていた。\n\nただし、このライダースーツには「黒歴史」がある。ブルババは買ったときに大喜びで袖を通したのだが、彼もまた丸くてがっしりした体つきだったため、ぴったりとした白いゴム質の生地に隙間なく包み込まれてしまった。バイクで揺れる姿は、SFの戦士にはまるで見えず、高速で揺れる「巨大な魔法のミルクプリン」そのものだった。このスーツで町を走るたび、通りがかりの子どもたちが指をさして「プリンおじさん！」と叫ぶ。ついに恥ずかしさに耐えかねたブルババは、スーツを脱ぎ捨て、飾りとしてバイクの前に掛けてしまった。\n\n酒場の隅にあるビリヤード台とダーツの的は、この二人の旧友が毎週繰り広げる決闘の証人だった。\n\n「なあググバ、今日はおれのキューをその不器用な爪で触るなよ。前に思い切り突いたせいで、隣のテーブルのジョッキが床に落ちたんだからな。」ブルババは煙草をくわえ、横目で笑いながら、酒場の大窓の外に停まって白い光を放つ愛車を叩いた。\n\nググバは、ほとんど見えない首を人の好さそうにさすり、低く笑った。「あれは事故だよ、ブルババ。それに……今日はいつもと違うんだ。」\n\n「ほう？ 珍しく自信満々だな。じゃあ賭けるか？」ブルババは興味を引かれ、胸を叩いた。目には勝利への確信が満ちている。「三番勝負だ！ おれが勝ったら、おれと酒場の仲間たち全員に一年分の串焼きと酒をおごってもらう。だが、お前が勝ったら……おれの純白の未来的バイクと白いヘルメットは全部お前のものだ！」\n\nブルババの心の中では、これは絶対に損のない賭けだった。自分は酒場でも名の知れた射撃の名手でビリヤードの達人だ。勝てば一年間ただで飲み食いできる。バイクのほうは、この大男に十個の度胸を貸したところで、勝てるはずがないと思っていた。\n\n酒場に冷やかしの歓声が上がり、皆がはやし立て、ググバが一年分の焼き肉をどう弁償するのかを見物しようと待ち構えた。\n\nところが、第一ゲームはダーツ。先攻のブルババは鮮やかな手首さばきで、なかなかの得点を挙げた。ググバの番になると、彼の分厚く太い指がほとんどミニチュアのようなダーツをつまむ姿はひどく滑稽で、周りの酸欠の子どもたちは口を押さえて笑った。しかし、ググバが心を静め、普段のとぼけた表情を消したとき、極寒の洞窟と重圧の環境で長年鍛えられた恐ろしいほどのバランス感覚が、極限まで発揮された。彼は何気なく腕を振った――\n\n「トン！ トン！ トン！」\n三本のダーツは寸分の狂いもなく、すべて的の真ん中に突き刺さり、ブルズアイを割ってしまった。ブルババは目を丸くし、口から煙草が落ちそうになった。\n\n第二ゲームはビリヤード。ブルババはきわどい位置取りで巻き返すつもりだったが、ググバは外見からは想像できない驚くべき集中力を見せた。一打ごとの力加減は小さな地震のように正確で重みがあり、白い玉は従順な兵士のようにテーブルの上で完璧な軌跡を描き、的球を次々と落としていった。\n\nストレート負け。一点の疑いもない完封だった。\n\n酒場は丸三秒間静まり返り、やがて雷のような歓声とはやし声が爆発した。ブルババはビリヤード台の前に立ち尽くし、石のように固まった。いつもは穏やかで、子どもたちを変顔で笑わせることさえある親友を見つめ、頭の中が真っ白になった。――負けた？ 一年分の串焼きと酒をせしめるどころか、自慢のバイクまで失ってしまった！\n\n「……お前、普段はバカのふりをしてるんだろ？」ブルババは口の端をひきつらせ、胸の痛みをこらえながらバイクの鍵と白いヘルメットをテーブルに叩きつけ、泣き笑いで罵った。「わかったよ！ 負けは負けだ！ 車はお前のものだ……こんな賭けにすればよかった、おれの愛車よ！」\n\nググバは鍵とヘルメットを受け取り、ごつごつした大きな手で冷たい白い金属のボディを撫でた。バイクの前に掛かった、人を「ミルクプリン」に変えると噂の白いライダースーツを見て、人の好さそうに笑った。\n\n「えっと……ブルババ、この服は大きすぎるよ……というか、前に君が着たときは白いプリンみたいだったから、おれなんか足一本も入らないと思う。だから、もう誰も着ないことにしないか？」\n\nブルババは「白いプリン」という言葉を聞くなり顔を赤くし、やがてこらえきれずに吹き出して笑い転げた。「うるせえ！ 着ないなら着ないでいい！ どうせあの服は恥ずかしすぎるんだ、バイクの前に掛けてマスコットにしておくのがちょうどいい！」\n\nググバは白いヘルメットを、首がほとんどない丸い頭に不器用に無理やりかぶせた。その光景はおかしさの極みだった。ブルババはやれやれと首を振り、最愛の愛車が地平線の彼方に消えていくのを見つめた。",
+       "fr": "Deep into the night, the \"Rusty Anchor\" tavern in the border town was always filled with smoke, mingled with the smell of cheap malt ale and roasting meat. To most people it was a place where all sorts mixed together, but to Gugba and Burbaba, it was a haven where they could talk about anything.\n\nAs for Burbaba, everyone in town knew about his prized treasure: a sleek, pure-white, futuristic heavy bike that glowed with a sci-fi neon halo. It came with a matching white full-face helmet and a complete set of sharply tailored, high-tech white skin-tight riding gear.\n\nBut that riding suit had a \"dark history.\" When Burbaba first bought it, he put it on with great excitement, only to find that, with his equally round and sturdy build, he was wrapped so tightly in the clinging white rubbery material that not a gap was left. When he rode and swayed, he looked nothing like a sci-fi warrior; he looked like a \"giant magic milk pudding\" jiggling at high speed. Every time he wore it into town, passing children couldn't help pointing and shouting, \"Uncle Pudding!\" In the end, Burbaba could no longer bear the embarrassment, took the suit off, and hung it on the front of the bike as a decoration.\n\nAs for the pool table and dartboard in the corner of the tavern, they bore witness to the two old friends' weekly duel to the death.\n\n\"Listen, Gugba, don't touch my cue with those clumsy claws of yours today. Last time you smashed the cue ball so hard, you knocked the beer mugs off the next table onto the floor.\" Burbaba, a cigarette in his mouth, grinned out of the corner of his eye and patted the bike parked outside the tavern's big window, gleaming with its pristine white tech glow.\n\nGugba scratched his nearly invisible neck in his good-natured way and gave a low chuckle. \"That was an accident, Burbaba. And... today is a bit different.\"\n\n\"Oh? Awfully confident for once. Dare to make a bet?\" Burbaba's interest was piqued. He slapped his chest, his eyes brimming with certainty. \"Best of three! If I win, you buy me and all the guys in this tavern a whole year of grilled skewers and drinks. But if you win... my pure-white futuristic bike and white helmet are all yours!\"\n\nIn Burbaba's mind, it was a bet with no way to lose. He was a famous sharpshooter and pool master in the tavern, and winning meant a year of free food and drink. As for the bike? Even if he lent that big lug ten times the nerve, he didn't think he could win.\n\nThe tavern erupted in cheers and hoots, everyone egging them on, waiting to see how Gugba would pay for a year of grilled meat.\n\nBut the first game was darts. Burbaba threw first and scored well with a nimble flick of his wrist. When it was Gugba's turn, his thick, stubby fingers pinching a dart that looked almost miniature made for a ridiculous sight, and the oxygen-deprived children around him covered their mouths and giggled. But when Gugba settled his mind and dropped his usual goofy expression, the terrifying sense of balance he had honed over years in frigid polar caves and crushing pressure showed itself to the fullest. He casually flicked his arm...\n\n\"Thunk! Thunk! Thunk!\"\nAll three darts struck dead center in the bullseye, even splitting it apart. Burbaba's eyes went wide, and the cigarette nearly fell from his mouth.\n\nThe second game was pool. Burbaba had hoped to claw one back with tricky positioning, but Gugba showed a startling focus that didn't match his appearance. Each shot's force was controlled as precisely and as heavily as a tiny earthquake; the cue ball behaved like an obedient soldier, drawing perfect paths across the table and clearing the object balls one after another.\n\nWon in straight sets. A shutout without a shred of suspense.\n\nThe tavern fell silent for a full three seconds, then burst into thunderous cheers and hollering. Burbaba stood frozen in front of the pool table, turned to stone. He stared at his usually gentle friend, who even made faces to make children laugh, and his mind went blank. He lost? Not only had he failed to win a year of skewers and drinks, he had lost his own treasured bike!\n\n\"...You've been playing dumb this whole time, haven't you?\" Burbaba's mouth twitched. Heartbroken, he slammed the bike key and the white helmet on the table, half laughing, half in tears as he cursed. \"Fine! A bet's a bet! The bike's yours... if only I hadn't bet this, my beloved bike!\"\n\nGugba took the key and the helmet and stroked the cold white metal body with his rough, large hand. He looked at the white riding suit hanging on the front of the bike, the one said to turn people into \"milk pudding,\" and smiled good-naturedly.\n\n\"Um... Burbaba, this suit is too big... I mean, last time I saw you in it, you looked like a white pudding, so I probably couldn't even get one foot in. So how about neither of us wears it?\"\n\nThe moment Burbaba heard the words \"white pudding,\" his old face flushed red, and then he couldn't help it and burst out laughing, doubling over. \"Get lost! Fine, no one wears it! That suit is too embarrassing anyway, so hanging it on the bike as a mascot is just right!\"\n\nGugba awkwardly crammed the white helmet onto his round, nearly neckless head. The sight was the height of absurdity. Burbaba shook his head helplessly and watched his beloved bike disappear over the horizon.",
+       "de": "Deep into the night, the \"Rusty Anchor\" tavern in the border town was always filled with smoke, mingled with the smell of cheap malt ale and roasting meat. To most people it was a place where all sorts mixed together, but to Gugba and Burbaba, it was a haven where they could talk about anything.\n\nAs for Burbaba, everyone in town knew about his prized treasure: a sleek, pure-white, futuristic heavy bike that glowed with a sci-fi neon halo. It came with a matching white full-face helmet and a complete set of sharply tailored, high-tech white skin-tight riding gear.\n\nBut that riding suit had a \"dark history.\" When Burbaba first bought it, he put it on with great excitement, only to find that, with his equally round and sturdy build, he was wrapped so tightly in the clinging white rubbery material that not a gap was left. When he rode and swayed, he looked nothing like a sci-fi warrior; he looked like a \"giant magic milk pudding\" jiggling at high speed. Every time he wore it into town, passing children couldn't help pointing and shouting, \"Uncle Pudding!\" In the end, Burbaba could no longer bear the embarrassment, took the suit off, and hung it on the front of the bike as a decoration.\n\nAs for the pool table and dartboard in the corner of the tavern, they bore witness to the two old friends' weekly duel to the death.\n\n\"Listen, Gugba, don't touch my cue with those clumsy claws of yours today. Last time you smashed the cue ball so hard, you knocked the beer mugs off the next table onto the floor.\" Burbaba, a cigarette in his mouth, grinned out of the corner of his eye and patted the bike parked outside the tavern's big window, gleaming with its pristine white tech glow.\n\nGugba scratched his nearly invisible neck in his good-natured way and gave a low chuckle. \"That was an accident, Burbaba. And... today is a bit different.\"\n\n\"Oh? Awfully confident for once. Dare to make a bet?\" Burbaba's interest was piqued. He slapped his chest, his eyes brimming with certainty. \"Best of three! If I win, you buy me and all the guys in this tavern a whole year of grilled skewers and drinks. But if you win... my pure-white futuristic bike and white helmet are all yours!\"\n\nIn Burbaba's mind, it was a bet with no way to lose. He was a famous sharpshooter and pool master in the tavern, and winning meant a year of free food and drink. As for the bike? Even if he lent that big lug ten times the nerve, he didn't think he could win.\n\nThe tavern erupted in cheers and hoots, everyone egging them on, waiting to see how Gugba would pay for a year of grilled meat.\n\nBut the first game was darts. Burbaba threw first and scored well with a nimble flick of his wrist. When it was Gugba's turn, his thick, stubby fingers pinching a dart that looked almost miniature made for a ridiculous sight, and the oxygen-deprived children around him covered their mouths and giggled. But when Gugba settled his mind and dropped his usual goofy expression, the terrifying sense of balance he had honed over years in frigid polar caves and crushing pressure showed itself to the fullest. He casually flicked his arm...\n\n\"Thunk! Thunk! Thunk!\"\nAll three darts struck dead center in the bullseye, even splitting it apart. Burbaba's eyes went wide, and the cigarette nearly fell from his mouth.\n\nThe second game was pool. Burbaba had hoped to claw one back with tricky positioning, but Gugba showed a startling focus that didn't match his appearance. Each shot's force was controlled as precisely and as heavily as a tiny earthquake; the cue ball behaved like an obedient soldier, drawing perfect paths across the table and clearing the object balls one after another.\n\nWon in straight sets. A shutout without a shred of suspense.\n\nThe tavern fell silent for a full three seconds, then burst into thunderous cheers and hollering. Burbaba stood frozen in front of the pool table, turned to stone. He stared at his usually gentle friend, who even made faces to make children laugh, and his mind went blank. He lost? Not only had he failed to win a year of skewers and drinks, he had lost his own treasured bike!\n\n\"...You've been playing dumb this whole time, haven't you?\" Burbaba's mouth twitched. Heartbroken, he slammed the bike key and the white helmet on the table, half laughing, half in tears as he cursed. \"Fine! A bet's a bet! The bike's yours... if only I hadn't bet this, my beloved bike!\"\n\nGugba took the key and the helmet and stroked the cold white metal body with his rough, large hand. He looked at the white riding suit hanging on the front of the bike, the one said to turn people into \"milk pudding,\" and smiled good-naturedly.\n\n\"Um... Burbaba, this suit is too big... I mean, last time I saw you in it, you looked like a white pudding, so I probably couldn't even get one foot in. So how about neither of us wears it?\"\n\nThe moment Burbaba heard the words \"white pudding,\" his old face flushed red, and then he couldn't help it and burst out laughing, doubling over. \"Get lost! Fine, no one wears it! That suit is too embarrassing anyway, so hanging it on the bike as a mascot is just right!\"\n\nGugba awkwardly crammed the white helmet onto his round, nearly neckless head. The sight was the height of absurdity. Burbaba shook his head helplessly and watched his beloved bike disappear over the horizon.",
+       "es": "Deep into the night, the \"Rusty Anchor\" tavern in the border town was always filled with smoke, mingled with the smell of cheap malt ale and roasting meat. To most people it was a place where all sorts mixed together, but to Gugba and Burbaba, it was a haven where they could talk about anything.\n\nAs for Burbaba, everyone in town knew about his prized treasure: a sleek, pure-white, futuristic heavy bike that glowed with a sci-fi neon halo. It came with a matching white full-face helmet and a complete set of sharply tailored, high-tech white skin-tight riding gear.\n\nBut that riding suit had a \"dark history.\" When Burbaba first bought it, he put it on with great excitement, only to find that, with his equally round and sturdy build, he was wrapped so tightly in the clinging white rubbery material that not a gap was left. When he rode and swayed, he looked nothing like a sci-fi warrior; he looked like a \"giant magic milk pudding\" jiggling at high speed. Every time he wore it into town, passing children couldn't help pointing and shouting, \"Uncle Pudding!\" In the end, Burbaba could no longer bear the embarrassment, took the suit off, and hung it on the front of the bike as a decoration.\n\nAs for the pool table and dartboard in the corner of the tavern, they bore witness to the two old friends' weekly duel to the death.\n\n\"Listen, Gugba, don't touch my cue with those clumsy claws of yours today. Last time you smashed the cue ball so hard, you knocked the beer mugs off the next table onto the floor.\" Burbaba, a cigarette in his mouth, grinned out of the corner of his eye and patted the bike parked outside the tavern's big window, gleaming with its pristine white tech glow.\n\nGugba scratched his nearly invisible neck in his good-natured way and gave a low chuckle. \"That was an accident, Burbaba. And... today is a bit different.\"\n\n\"Oh? Awfully confident for once. Dare to make a bet?\" Burbaba's interest was piqued. He slapped his chest, his eyes brimming with certainty. \"Best of three! If I win, you buy me and all the guys in this tavern a whole year of grilled skewers and drinks. But if you win... my pure-white futuristic bike and white helmet are all yours!\"\n\nIn Burbaba's mind, it was a bet with no way to lose. He was a famous sharpshooter and pool master in the tavern, and winning meant a year of free food and drink. As for the bike? Even if he lent that big lug ten times the nerve, he didn't think he could win.\n\nThe tavern erupted in cheers and hoots, everyone egging them on, waiting to see how Gugba would pay for a year of grilled meat.\n\nBut the first game was darts. Burbaba threw first and scored well with a nimble flick of his wrist. When it was Gugba's turn, his thick, stubby fingers pinching a dart that looked almost miniature made for a ridiculous sight, and the oxygen-deprived children around him covered their mouths and giggled. But when Gugba settled his mind and dropped his usual goofy expression, the terrifying sense of balance he had honed over years in frigid polar caves and crushing pressure showed itself to the fullest. He casually flicked his arm...\n\n\"Thunk! Thunk! Thunk!\"\nAll three darts struck dead center in the bullseye, even splitting it apart. Burbaba's eyes went wide, and the cigarette nearly fell from his mouth.\n\nThe second game was pool. Burbaba had hoped to claw one back with tricky positioning, but Gugba showed a startling focus that didn't match his appearance. Each shot's force was controlled as precisely and as heavily as a tiny earthquake; the cue ball behaved like an obedient soldier, drawing perfect paths across the table and clearing the object balls one after another.\n\nWon in straight sets. A shutout without a shred of suspense.\n\nThe tavern fell silent for a full three seconds, then burst into thunderous cheers and hollering. Burbaba stood frozen in front of the pool table, turned to stone. He stared at his usually gentle friend, who even made faces to make children laugh, and his mind went blank. He lost? Not only had he failed to win a year of skewers and drinks, he had lost his own treasured bike!\n\n\"...You've been playing dumb this whole time, haven't you?\" Burbaba's mouth twitched. Heartbroken, he slammed the bike key and the white helmet on the table, half laughing, half in tears as he cursed. \"Fine! A bet's a bet! The bike's yours... if only I hadn't bet this, my beloved bike!\"\n\nGugba took the key and the helmet and stroked the cold white metal body with his rough, large hand. He looked at the white riding suit hanging on the front of the bike, the one said to turn people into \"milk pudding,\" and smiled good-naturedly.\n\n\"Um... Burbaba, this suit is too big... I mean, last time I saw you in it, you looked like a white pudding, so I probably couldn't even get one foot in. So how about neither of us wears it?\"\n\nThe moment Burbaba heard the words \"white pudding,\" his old face flushed red, and then he couldn't help it and burst out laughing, doubling over. \"Get lost! Fine, no one wears it! That suit is too embarrassing anyway, so hanging it on the bike as a mascot is just right!\"\n\nGugba awkwardly crammed the white helmet onto his round, nearly neckless head. The sight was the height of absurdity. Burbaba shook his head helplessly and watched his beloved bike disappear over the horizon.",
+       "zh_tw": "夜深了，邊境小鎮的「鏽錨酒館」裡總是煙霧瀰漫，混雜著劣質麥芽酒與烤肉的香氣。對其他人來說，這裡龍蛇雜處；但對格古巴和布魯伯巴而言，這裡是他們無話不談的避風港。\n\n說到布魯伯巴，鎮上誰不知道他那台引以為傲的寶貝——那是一台流線型、散發著科幻霓虹光暈的純白色未來感重機。車上還配備了一頂同色系的白色全罩安全帽，以及一整套剪裁俐落、充滿科技感的白色緊身騎士服。\n\n不過，這套騎士服背後其實有一段「黑歷史」。當初布魯伯巴買下它時興高采烈地套上，結果因為他那同樣圓潤厚實的身材，整個人硬生生地被緊身白膠布材質的衣服包裹得滴水不漏。當他騎著車晃動時，看起來根本不像什麼科幻戰士，反而像一顆在高速移動中晃動的「巨大魔法牛奶布丁」。每當他穿著這套衣服上街，路過的小孩都會忍不住指著他喊布丁叔叔。最後布魯伯巴實在受不了這種羞恥感，索性把這套衣服脫掉，當成裝飾掛在車頭。\n\n至於酒館角落的那組撞球檯和飛鏢靶，則是這兩個老朋友每週決一死戰的見證。\n\n「我說格古巴，今天別再用你那粗手粗腳的爪子碰我的球桿了。你上次那一記大力抽球，直接把隔壁桌的啤酒杯都震到地上了。」布魯伯巴嘴裡叼著菸，斜眼笑著拍了拍停在酒館落地窗外、正閃爍著潔白科技光芒的愛車。\n\n格古巴憨厚地摸了摸自己幾乎看不見的脖子，發出低沉的笑聲：「那是意外，布魯伯巴。而且……今天的狀況不太一樣。」\n\n「哦？難得你這麼有自信。那敢不敢打個賭？」布魯伯巴來了興致，拍了拍胸脯，眼神中寫滿了勝券在握，「三局兩勝！如果我贏了，你得包辦我和整間酒館兄弟們一整年的烤肉串和酒；但如果你贏了……我的純白未來感重機和白色安全帽全都歸你！」\n\n在布魯伯巴心裡，這根本是一場穩賺不賠的局。自己可是酒館裡赫赫有名的神射手兼撞球高手，贏了就能白吃白喝一整年；至於那台重機？借這笨大個十個膽子，他也覺得對方不可能贏。\n\n酒館裡響起了一陣起鬨的歡呼聲，大家紛紛起鬨叫好，等著看格古巴要怎麼賠出一整年的烤肉。\n\n然而，第一局是飛鏢。布魯伯巴率先投擲，憑藉著俐落的手腕拿下了不錯的分數。輪到格古巴時，他那厚重粗短的手指捏著幾近迷你尺寸的飛鏢，看起來滑稽極了。周圍缺氧的孩子們甚至掩嘴偷笑。然而，當格古巴沉下心、收斂起平時憨傻的表情，他那經年累月在極地寒洞與重壓環境中鍛鍊出的恐怖平衡感在此時發揮了極致。他隨手一揮——\n\n「噠！噠！噠！」\n三枚飛鏢精準無比地全數鑲嵌在紅心正中央，甚至把靶心都給扎裂了。布魯伯巴當場瞪大了眼睛，嘴裡的菸差點掉下來。\n\n第二局則是撞球。布魯伯巴原本還想靠著刁鑽的走位扳回一城，但格古巴展現了與他外表不符的驚人專注力。每一次出桿，力道的控制都宛如微型地震般精準而厚重，白球彷彿聽話的士兵，在檯面上劃出完美的軌跡，一顆接一顆將子球清空。\n\n直落二。毫無懸念的完封。\n\n酒館瞬間安靜了整整三秒，隨後爆發出如雷的歡呼與起鬨聲。布魯伯巴呆站在撞球檯前，整個人石化了。他看著一向溫和、甚至會扮鬼臉逗笑孩童的摯友，腦子裡一片空白——他居然輸了？不僅沒撈到整年的烤肉和酒，還把自己的寶貝重機給輸掉了！\n\n「……你這傢伙，平常都是裝笨的吧？」布魯伯巴嘴角抽搐著，心痛地將機車鑰匙與那頂白色安全帽重重地拍在桌上，欲哭無淚地笑罵道，「好啦！願賭服輸！車子歸你了……早知道我就不跟你賭這個了，我的愛車啊！」\n\n格古巴接過鑰匙和安全帽，粗糙的大手撫摸著冰冷的白色金屬車殼。他看著車頭上掛著的那套傳說中會讓人變成「牛奶布丁」的白色緊身騎士服，憨厚地笑了笑：\n\n「呃…… 布魯伯巴，這衣服太大了……我是說，上次看你穿起來像顆白布丁的樣子，我大概連一隻腳都塞不進去。索性我們誰也別穿了吧？」\n\n布魯伯巴聽到「白布丁」三個字，頓時老臉一紅，隨後自己也沒忍住，噗哧一聲笑得前俯後仰：「滾你的！不穿就不穿！反正那套衣服穿起來羞恥度太高，掛在車頭當吉祥物剛好！」\n\n格古巴笨拙地把那頂白色安全帽勉強扣在他那幾乎沒脖子的圓滾滾腦袋上，畫面滑稽到了極點。布魯伯巴無奈地搖了搖頭，看著那台摯愛消失在地平線。"
+      },
+      "HPmin": 886,
+      "ATKmin": 53,
+      "DEFmin": 40,
+      "SATKmin": 29,
+      "SDEFmin": 24,
+      "HPmax": 9000,
+      "ATKmax": 560,
+      "DEFmax": 428,
+      "SATKmax": 261,
+      "SDEFmax": 237,
+      "EXPmax": 10000000,
+      "HPcoeff": 0.800000011920929,
+      "ATKcoeff": 0.800000011920929,
+      "DEFcoeff": 0.800000011920929,
+      "SATKcoeff": 0.800000011920929,
+      "SDEFcoeff": 0.800000011920929,
+      "EXPcoeff": 2.0999999046325684,
+      "skillMasterLevel": [
+       1,
+       30,
+       50,
+       90
+      ],
+      "skills": [
+       "@out_of_my_way",
+       "@whiskey",
+       "@quake_slash",
+       "@rhythm_headbutt"
+      ],
+      "_cost": 0
+     }
+    ],
+    "rebirth": {
+     "ID": 68,
+     "availableVersion": 2.5,
+     "srcChrID": 19,
+     "dstChrID": 1291,
+     "coins": 30000,
+     "items": [
+      {
+       "code": 24069
+      },
+      {
+       "code": 25089
+      },
+      {
+       "code": 11791
+      }
+     ],
+     "mons": [
+      {
+       "chrID": 621,
+       "level": 50
+      },
+      {
+       "chrID": 198,
+       "level": 50
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "icons": [
+  {
+   "icon_no": 140,
+   "file": "art/skill_icon_140.png"
+  },
+  {
+   "icon_no": 141,
+   "file": "art/skill_icon_141.png"
+  }
+ ],
+ "asset_db": {
+  "Pieces": [
+   {
+    "id": 3003,
+    "w": 106,
+    "h": 106,
+    "ver": 138
+   }
+  ],
+  "Illusts": [
+   {
+    "id": 3003,
+    "w": 878,
+    "h": 1024,
+    "ver": 131
+   }
+  ],
+  "BuddyThumbs": [
+   {
+    "id": 523,
+    "w": 106,
+    "h": 106,
+    "ver": 131
+   }
+  ],
+  "BuddyImages": [
+   {
+    "id": 0,
+    "name": "buddy_523a",
+    "w": 367,
+    "h": 605,
+    "ver": 131
+   },
+   {
+    "id": 0,
+    "name": "buddy_523b",
+    "w": 235,
+    "h": 327,
+    "ver": 131
+   }
+  ]
+ },
+ "native": [
+  "gugba_native"
+ ]
+}

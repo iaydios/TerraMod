@@ -1,0 +1,724 @@
+{
+ "gugba_native": {
+  "0x108e050": {
+   "cave": "cm1",
+   "live": [
+    "v0",
+    "v1",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x20",
+    "x25",
+    "x26",
+    "x27",
+    "x28"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x108de38",
+    "0x108e0e0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x108ee64": {
+   "cave": "cm2",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x108eae8",
+    "0x108f1bc"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x102816c": {
+   "cave": "equip",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x1028018",
+    "0x10282a0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x10917dc": {
+   "cave": "gdmg",
+   "live": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x8",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x10917a8",
+    "0x1091bc0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcb5150": {
+   "cave": "hpre",
+   "live": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xcb5150",
+    "0xcb5314"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcc0514": {
+   "cave": "hend",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xcbfeb4",
+    "0xcc0794"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x1086050": {
+   "cave": "hop",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x1085fc8",
+    "0x10868a4"
+   ],
+   "indirect_jump_after": true
+  },
+  "0x1080b68": {
+   "cave": "icons",
+   "live": [
+    "v0",
+    "v9",
+    "v14",
+    "v15",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x1080990",
+    "0x10810c0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x10be774": {
+   "cave": "tapemit",
+   "live": [
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x10be620",
+    "0x10beaa0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcc3dd4": {
+   "cave": "pick",
+   "live": [
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x20",
+    "x23",
+    "x24",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0xcc3c38",
+    "0xcc4110"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcc3df4": {
+   "cave": "gadd",
+   "live": [
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x20",
+    "x23",
+    "x24",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0xcc3c38",
+    "0xcc4110"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xf0cc1c": {
+   "cave": "fist",
+   "live": [
+    "v8",
+    "v9",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x20",
+    "x21",
+    "x23",
+    "x25",
+    "x27",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xf0cb9c",
+    "0xf0d058"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x1078e68": {
+   "cave": "hdef",
+   "live": [
+    "v0",
+    "v1",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x25",
+    "x26",
+    "x27",
+    "x28"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x1078e40",
+    "0x1078f30"
+   ],
+   "indirect_jump_after": false
+  }
+ },
+ "kana_native": {
+  "0xcd30d8": {
+   "cave": "heart",
+   "live": [
+    "v14",
+    "v15",
+    "x20",
+    "x21",
+    "x23",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0xcd2a20",
+    "0xcd3320"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x10bea0c": {
+   "cave": "queen",
+   "live": [
+    "v0",
+    "v1",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x10be620",
+    "0x10beaa0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x10917a8": {
+   "cave": "contrast",
+   "live": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x10917a8",
+    "0x1091bc0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x11668b8": {
+   "cave": "red",
+   "live": [
+    "v9",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x21",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0x1166838",
+    "0x11669e4"
+   ],
+   "indirect_jump_after": false
+  },
+  "0x102c270": {
+   "cave": "force",
+   "live": [
+    "v0",
+    "v1",
+    "v9",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0x102bf94",
+    "0x102d4c0"
+   ],
+   "indirect_jump_after": true
+  },
+  "0xcc4048": {
+   "cave": "line",
+   "live": [
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x19",
+    "x21",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": true,
+   "func": [
+    "0xcc3c38",
+    "0xcc4110"
+   ],
+   "indirect_jump_after": false
+  }
+ },
+ "macuri_native": {
+  "0x10917cc": {
+   "cave": "dmg",
+   "live": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0x10917a8",
+    "0x1091bc0"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcc3ef8": {
+   "cave": "sah",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x2",
+    "x3",
+    "x19",
+    "x20",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xcc3c38",
+    "0xcc4110"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xf0ce10": {
+   "cave": "pow",
+   "live": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v8",
+    "v10",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x5",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xf0cb9c",
+    "0xf0d058"
+   ],
+   "indirect_jump_after": false
+  }
+ },
+ "yapkar_native": {
+  "0xcd9ac4": {
+   "cave": "tick",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xcd9a80",
+    "0xcd9c1c"
+   ],
+   "indirect_jump_after": false
+  },
+  "0xcc3eec": {
+   "cave": "sah",
+   "live": [
+    "v0",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x19",
+    "x26",
+    "x27",
+    "x28",
+    "x29"
+   ],
+   "flags": false,
+   "link": false,
+   "func": [
+    "0xcc3c38",
+    "0xcc4110"
+   ],
+   "indirect_jump_after": false
+  }
+ }
+}

@@ -1,0 +1,1766 @@
+{
+ "_note": "Y'apkar? Lambda (1292), self-contained native module yapkar_native.  Marks: 4901 Delusion, 4902 Madness (+1 DEF% 4911, +2 SDEF% 4912, +3..+5 ice/dark/thunder columns 4941..4943, +6..+9 fire/ice/dark/thunder rows 4944..4947, +10..+13 fire/ice/dark/thunder X 4961..4964), 4903 Awakening (+1 ATK% 4913, +2 SATK% 4914, +3..+5 moon/gravity/photon columns 4951..4953, +6..+9 sun/moon/gravity/photon rows 4954..4957, +10..+13 sun/moon/gravity/photon X 4971..4974), 4904 Aura.  Madness/Awakening are pincer-or-chain column attacks (one shared emit roll, the hidden elements are appended to the emitted list); the symbiotic Y'apkar (557) gets +100%.",
+ "skills": [
+  {
+   "key": "delusion",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 14,
+    "iconNo": 92,
+    "nameString": {
+     "en": "Y'apkar's Delusion",
+     "ja": "ヤップカーの妄想",
+     "fr": "Y'apkar's Delusion",
+     "de": "Y'apkar's Delusion",
+     "es": "Y'apkar's Delusion",
+     "zh_tw": "亞普卡妄想"
+    },
+    "descString": {
+     "en": "He studies with painstaking care and turns his delusions into reality, step by step. Immune to status ailments and recovers 10% max HP every turn. If Y'apkar is on the field, Y'apkar gains the same effect.",
+     "ja": "彼は丹念に研究を重ね、妄想を一歩ずつ現実にしていく。状態異常を無効にし、毎ターン最大HPの10%回復する。場にヤップカーがいれば、ヤップカーも同じ効果を得る。",
+     "fr": "He studies with painstaking care and turns his delusions into reality, step by step. Immune to status ailments and recovers 10% max HP every turn. If Y'apkar is on the field, Y'apkar gains the same effect.",
+     "de": "He studies with painstaking care and turns his delusions into reality, step by step. Immune to status ailments and recovers 10% max HP every turn. If Y'apkar is on the field, Y'apkar gains the same effect.",
+     "es": "He studies with painstaking care and turns his delusions into reality, step by step. Immune to status ailments and recovers 10% max HP every turn. If Y'apkar is on the field, Y'apkar gains the same effect.",
+     "zh_tw": "他細心鑽研，讓妄想一步步成真。免疫異常狀態，每回合恢復10%最大生命。若場上有亞普卡，亞普卡也獲得同等效果。"
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4901
+   }
+  },
+  {
+   "key": "madness",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 92,
+    "nameString": {
+     "en": "Y'apkar's Madness",
+     "ja": "ヤップカーの狂気",
+     "fr": "Y'apkar's Madness",
+     "de": "Y'apkar's Madness",
+     "es": "Y'apkar's Madness",
+     "zh_tw": "亞普卡瘋狂"
+    },
+    "descString": {
+     "en": "The calculations of a highly intelligent machine become magic of four elements. On a pincer or chain, may unleash Fire, Ice, Dark and Thunder magic (0.5x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's DEF and MDEF +100%.",
+     "ja": "高度な知能を持つ機械の演算が、四つの元素の魔法となる。挟撃または連鎖時、確率で挟んだ敵とその横列・縦列・X型範囲すべてに火・氷・闇・雷の魔法ダメージ（各0.5倍）を同時に与える。場にヤップカーがいれば、ヤップカーの防御と魔防が100%上昇する。",
+     "fr": "The calculations of a highly intelligent machine become magic of four elements. On a pincer or chain, may unleash Fire, Ice, Dark and Thunder magic (0.5x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's DEF and MDEF +100%.",
+     "de": "The calculations of a highly intelligent machine become magic of four elements. On a pincer or chain, may unleash Fire, Ice, Dark and Thunder magic (0.5x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's DEF and MDEF +100%.",
+     "es": "The calculations of a highly intelligent machine become magic of four elements. On a pincer or chain, may unleash Fire, Ice, Dark and Thunder magic (0.5x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's DEF and MDEF +100%.",
+     "zh_tw": "高智慧機械的演算，化為四種元素的魔法。夾擊或連鎖時，有機率對被夾擊的敵人，連同其整條橫列、縱列與X型範圍，同時施放火、冰、暗、雷四種魔法傷害（各0.5倍）。若場上有亞普卡，亞普卡的防禦與魔防提升100%。"
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 1,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 50,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 136,
+    "life": 0,
+    "capacity": 4902
+   }
+  },
+  {
+   "key": "madness_def",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 6,
+    "iconNo": 4,
+    "nameString": {
+     "en": "Y'apkar's Madness (DEF)",
+     "ja": "ヤップカーの狂気（防御）",
+     "fr": "Y'apkar's Madness (DEF)",
+     "de": "Y'apkar's Madness (DEF)",
+     "es": "Y'apkar's Madness (DEF)",
+     "zh_tw": "亞普卡瘋狂（防禦）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4911
+   }
+  },
+  {
+   "key": "madness_sdef",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 8,
+    "iconNo": 26,
+    "nameString": {
+     "en": "Y'apkar's Madness (MDEF)",
+     "ja": "ヤップカーの狂気（魔防）",
+     "fr": "Y'apkar's Madness (MDEF)",
+     "de": "Y'apkar's Madness (MDEF)",
+     "es": "Y'apkar's Madness (MDEF)",
+     "zh_tw": "亞普卡瘋狂（魔防）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4912
+   }
+  },
+  {
+   "key": "madness_ice",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 9,
+    "nameString": {
+     "en": "Y'apkar's Madness (Ice)",
+     "ja": "ヤップカーの狂気（氷）",
+     "fr": "Y'apkar's Madness (Ice)",
+     "de": "Y'apkar's Madness (Ice)",
+     "es": "Y'apkar's Madness (Ice)",
+     "zh_tw": "亞普卡瘋狂（冰）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 2,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 137,
+    "life": 0,
+    "capacity": 4941
+   }
+  },
+  {
+   "key": "madness_dark",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 10,
+    "nameString": {
+     "en": "Y'apkar's Madness (Dark)",
+     "ja": "ヤップカーの狂気（闇）",
+     "fr": "Y'apkar's Madness (Dark)",
+     "de": "Y'apkar's Madness (Dark)",
+     "es": "Y'apkar's Madness (Dark)",
+     "zh_tw": "亞普卡瘋狂（暗）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 4,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 139,
+    "life": 0,
+    "capacity": 4942
+   }
+  },
+  {
+   "key": "madness_thunder",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 8,
+    "nameString": {
+     "en": "Y'apkar's Madness (Thunder)",
+     "ja": "ヤップカーの狂気（雷）",
+     "fr": "Y'apkar's Madness (Thunder)",
+     "de": "Y'apkar's Madness (Thunder)",
+     "es": "Y'apkar's Madness (Thunder)",
+     "zh_tw": "亞普卡瘋狂（雷）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 3,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 138,
+    "life": 0,
+    "capacity": 4943
+   }
+  },
+  {
+   "key": "madness_fire_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 7,
+    "nameString": {
+     "en": "Y'apkar's Madness (Fire, row)",
+     "ja": "ヤップカーの狂気（火・横列）",
+     "fr": "Y'apkar's Madness (Fire, row)",
+     "de": "Y'apkar's Madness (Fire, row)",
+     "es": "Y'apkar's Madness (Fire, row)",
+     "zh_tw": "亞普卡瘋狂（火·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 1,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 136,
+    "life": 0,
+    "capacity": 4944
+   }
+  },
+  {
+   "key": "madness_ice_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 9,
+    "nameString": {
+     "en": "Y'apkar's Madness (Ice, row)",
+     "ja": "ヤップカーの狂気（氷・横列）",
+     "fr": "Y'apkar's Madness (Ice, row)",
+     "de": "Y'apkar's Madness (Ice, row)",
+     "es": "Y'apkar's Madness (Ice, row)",
+     "zh_tw": "亞普卡瘋狂（冰·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 2,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 137,
+    "life": 0,
+    "capacity": 4945
+   }
+  },
+  {
+   "key": "madness_dark_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 10,
+    "nameString": {
+     "en": "Y'apkar's Madness (Dark, row)",
+     "ja": "ヤップカーの狂気（闇・横列）",
+     "fr": "Y'apkar's Madness (Dark, row)",
+     "de": "Y'apkar's Madness (Dark, row)",
+     "es": "Y'apkar's Madness (Dark, row)",
+     "zh_tw": "亞普卡瘋狂（暗·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 4,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 139,
+    "life": 0,
+    "capacity": 4946
+   }
+  },
+  {
+   "key": "madness_thunder_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 8,
+    "nameString": {
+     "en": "Y'apkar's Madness (Thunder, row)",
+     "ja": "ヤップカーの狂気（雷・横列）",
+     "fr": "Y'apkar's Madness (Thunder, row)",
+     "de": "Y'apkar's Madness (Thunder, row)",
+     "es": "Y'apkar's Madness (Thunder, row)",
+     "zh_tw": "亞普卡瘋狂（雷·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 3,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 138,
+    "life": 0,
+    "capacity": 4947
+   }
+  },
+  {
+   "key": "madness_fire_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Madness (Fire, X)",
+     "ja": "ヤップカーの狂気（火・X）",
+     "fr": "Y'apkar's Madness (Fire, X)",
+     "de": "Y'apkar's Madness (Fire, X)",
+     "es": "Y'apkar's Madness (Fire, X)",
+     "zh_tw": "亞普卡瘋狂（火·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 1,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 136,
+    "life": 0,
+    "capacity": 4961
+   }
+  },
+  {
+   "key": "madness_ice_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Madness (Ice, X)",
+     "ja": "ヤップカーの狂気（氷・X）",
+     "fr": "Y'apkar's Madness (Ice, X)",
+     "de": "Y'apkar's Madness (Ice, X)",
+     "es": "Y'apkar's Madness (Ice, X)",
+     "zh_tw": "亞普卡瘋狂（冰·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 2,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 137,
+    "life": 0,
+    "capacity": 4962
+   }
+  },
+  {
+   "key": "madness_dark_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Madness (Dark, X)",
+     "ja": "ヤップカーの狂気（闇・X）",
+     "fr": "Y'apkar's Madness (Dark, X)",
+     "de": "Y'apkar's Madness (Dark, X)",
+     "es": "Y'apkar's Madness (Dark, X)",
+     "zh_tw": "亞普卡瘋狂（暗·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 4,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 139,
+    "life": 0,
+    "capacity": 4963
+   }
+  },
+  {
+   "key": "madness_thunder_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Madness (Thunder, X)",
+     "ja": "ヤップカーの狂気（雷・X）",
+     "fr": "Y'apkar's Madness (Thunder, X)",
+     "de": "Y'apkar's Madness (Thunder, X)",
+     "es": "Y'apkar's Madness (Thunder, X)",
+     "zh_tw": "亞普卡瘋狂（雷·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 3,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 0.5,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 138,
+    "life": 0,
+    "capacity": 4964
+   }
+  },
+  {
+   "key": "awakening",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 92,
+    "nameString": {
+     "en": "Y'apkar's Awakening",
+     "ja": "ヤップカーの覚醒",
+     "fr": "Y'apkar's Awakening",
+     "de": "Y'apkar's Awakening",
+     "es": "Y'apkar's Awakening",
+     "zh_tw": "亞普卡覺醒"
+    },
+    "descString": {
+     "en": "Meticulous research fully awakens the power of the highly intelligent machine. On a pincer or chain, may unleash Sun, Moon, Gravity and Photon magic (1.0x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's ATK and MATK +100%.",
+     "ja": "緻密な研究が、高度な知能を持つ機械の力を完全に目覚めさせる。挟撃または連鎖時、確率で挟んだ敵とその横列・縦列・X型範囲すべてに太陽・月・重力・閃光の魔法ダメージ（各1.0倍）を同時に与える。場にヤップカーがいれば、ヤップカーの攻撃と魔攻が100%上昇する。",
+     "fr": "Meticulous research fully awakens the power of the highly intelligent machine. On a pincer or chain, may unleash Sun, Moon, Gravity and Photon magic (1.0x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's ATK and MATK +100%.",
+     "de": "Meticulous research fully awakens the power of the highly intelligent machine. On a pincer or chain, may unleash Sun, Moon, Gravity and Photon magic (1.0x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's ATK and MATK +100%.",
+     "es": "Meticulous research fully awakens the power of the highly intelligent machine. On a pincer or chain, may unleash Sun, Moon, Gravity and Photon magic (1.0x each) on the pincered enemies plus their whole row, column and X-shaped area. If Y'apkar is on the field, Y'apkar's ATK and MATK +100%.",
+     "zh_tw": "精密的鑽研，讓高智慧機械的力量完全甦醒。夾擊或連鎖時，有機率對被夾擊的敵人，連同其整條橫列、縱列與X型範圍，同時施放太陽、月亮、重力、閃光四種魔法傷害（各1.0倍）。若場上有亞普卡，亞普卡的攻擊與魔攻提升100%。"
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 21,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 30,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 419,
+    "life": 0,
+    "capacity": 4903
+   }
+  },
+  {
+   "key": "awakening_atk",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 5,
+    "iconNo": 3,
+    "nameString": {
+     "en": "Y'apkar's Awakening (ATK)",
+     "ja": "ヤップカーの覚醒（攻撃）",
+     "fr": "Y'apkar's Awakening (ATK)",
+     "de": "Y'apkar's Awakening (ATK)",
+     "es": "Y'apkar's Awakening (ATK)",
+     "zh_tw": "亞普卡覺醒（攻擊）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4913
+   }
+  },
+  {
+   "key": "awakening_satk",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 1,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 7,
+    "iconNo": 24,
+    "nameString": {
+     "en": "Y'apkar's Awakening (MATK)",
+     "ja": "ヤップカーの覚醒（魔攻）",
+     "fr": "Y'apkar's Awakening (MATK)",
+     "de": "Y'apkar's Awakening (MATK)",
+     "es": "Y'apkar's Awakening (MATK)",
+     "zh_tw": "亞普卡覺醒（魔攻）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 0,
+    "power": 0.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 0,
+    "life": 0,
+    "capacity": 4914
+   }
+  },
+  {
+   "key": "awakening_moon",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 137,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Moon)",
+     "ja": "ヤップカーの覚醒（月）",
+     "fr": "Y'apkar's Awakening (Moon)",
+     "de": "Y'apkar's Awakening (Moon)",
+     "es": "Y'apkar's Awakening (Moon)",
+     "zh_tw": "亞普卡覺醒（月亮）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 22,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 425,
+    "life": 0,
+    "capacity": 4951
+   }
+  },
+  {
+   "key": "awakening_gravity",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 114,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Gravity)",
+     "ja": "ヤップカーの覚醒（重力）",
+     "fr": "Y'apkar's Awakening (Gravity)",
+     "de": "Y'apkar's Awakening (Gravity)",
+     "es": "Y'apkar's Awakening (Gravity)",
+     "zh_tw": "亞普卡覺醒（重力）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 18,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 335,
+    "life": 0,
+    "capacity": 4952
+   }
+  },
+  {
+   "key": "awakening_photon",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 113,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Photon)",
+     "ja": "ヤップカーの覚醒（閃光）",
+     "fr": "Y'apkar's Awakening (Photon)",
+     "de": "Y'apkar's Awakening (Photon)",
+     "es": "Y'apkar's Awakening (Photon)",
+     "zh_tw": "亞普卡覺醒（閃光）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Column",
+     "ja": "挟み＋縦列",
+     "fr": "Tenaille + colonne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋縱列"
+    },
+    "weap": 0,
+    "attrib": 17,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 1,
+    "sy": 7,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 329,
+    "life": 0,
+    "capacity": 4953
+   }
+  },
+  {
+   "key": "awakening_sun_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Sun, row)",
+     "ja": "ヤップカーの覚醒（太陽・横列）",
+     "fr": "Y'apkar's Awakening (Sun, row)",
+     "de": "Y'apkar's Awakening (Sun, row)",
+     "es": "Y'apkar's Awakening (Sun, row)",
+     "zh_tw": "亞普卡覺醒（太陽·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 21,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 419,
+    "life": 0,
+    "capacity": 4954
+   }
+  },
+  {
+   "key": "awakening_moon_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 137,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Moon, row)",
+     "ja": "ヤップカーの覚醒（月・横列）",
+     "fr": "Y'apkar's Awakening (Moon, row)",
+     "de": "Y'apkar's Awakening (Moon, row)",
+     "es": "Y'apkar's Awakening (Moon, row)",
+     "zh_tw": "亞普卡覺醒（月亮·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 22,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 425,
+    "life": 0,
+    "capacity": 4955
+   }
+  },
+  {
+   "key": "awakening_gravity_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 114,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Gravity, row)",
+     "ja": "ヤップカーの覚醒（重力・横列）",
+     "fr": "Y'apkar's Awakening (Gravity, row)",
+     "de": "Y'apkar's Awakening (Gravity, row)",
+     "es": "Y'apkar's Awakening (Gravity, row)",
+     "zh_tw": "亞普卡覺醒（重力·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 18,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 335,
+    "life": 0,
+    "capacity": 4956
+   }
+  },
+  {
+   "key": "awakening_photon_row",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 113,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Photon, row)",
+     "ja": "ヤップカーの覚醒（閃光・横列）",
+     "fr": "Y'apkar's Awakening (Photon, row)",
+     "de": "Y'apkar's Awakening (Photon, row)",
+     "es": "Y'apkar's Awakening (Photon, row)",
+     "zh_tw": "亞普卡覺醒（閃光·橫列）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "Pincer Row",
+     "ja": "挟み＋横列",
+     "fr": "Tenaille + ligne",
+     "de": "Zange",
+     "es": "Área de pinza",
+     "zh_tw": "夾擊＋橫列"
+    },
+    "weap": 0,
+    "attrib": 17,
+    "range": 3,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 1,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 0.0,
+    "successRate": 0,
+    "effID": 329,
+    "life": 0,
+    "capacity": 4957
+   }
+  },
+  {
+   "key": "awakening_sun_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Sun, X)",
+     "ja": "ヤップカーの覚醒（太陽・X）",
+     "fr": "Y'apkar's Awakening (Sun, X)",
+     "de": "Y'apkar's Awakening (Sun, X)",
+     "es": "Y'apkar's Awakening (Sun, X)",
+     "zh_tw": "亞普卡覺醒（太陽·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 23,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 419,
+    "life": 0,
+    "capacity": 4971
+   }
+  },
+  {
+   "key": "awakening_moon_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 137,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Moon, X)",
+     "ja": "ヤップカーの覚醒（月・X）",
+     "fr": "Y'apkar's Awakening (Moon, X)",
+     "de": "Y'apkar's Awakening (Moon, X)",
+     "es": "Y'apkar's Awakening (Moon, X)",
+     "zh_tw": "亞普卡覺醒（月亮·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 24,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 425,
+    "life": 0,
+    "capacity": 4972
+   }
+  },
+  {
+   "key": "awakening_gravity_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Gravity, X)",
+     "ja": "ヤップカーの覚醒（重力・X）",
+     "fr": "Y'apkar's Awakening (Gravity, X)",
+     "de": "Y'apkar's Awakening (Gravity, X)",
+     "es": "Y'apkar's Awakening (Gravity, X)",
+     "zh_tw": "亞普卡覺醒（重力·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 18,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 335,
+    "life": 0,
+    "capacity": 4973
+   }
+  },
+  {
+   "key": "awakening_photon_x",
+   "raw": {
+    "blowOff": 2,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 2,
+    "counterFilter": 0,
+    "kind": 0,
+    "status": 0,
+    "iconNo": 136,
+    "nameString": {
+     "en": "Y'apkar's Awakening (Photon, X)",
+     "ja": "ヤップカーの覚醒（閃光・X）",
+     "fr": "Y'apkar's Awakening (Photon, X)",
+     "de": "Y'apkar's Awakening (Photon, X)",
+     "es": "Y'apkar's Awakening (Photon, X)",
+     "zh_tw": "亞普卡覺醒（閃光·X）"
+    },
+    "descString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "rangePrefixString": {
+     "en": "X Area",
+     "ja": "X型",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": "X型"
+    },
+    "weap": 0,
+    "attrib": 17,
+    "range": 16,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 5,
+    "sy": 5,
+    "emitRatio": 100,
+    "power": 1.0,
+    "spower": 2.0,
+    "successRate": 0,
+    "effID": 329,
+    "life": 0,
+    "capacity": 4974
+   }
+  },
+  {
+   "key": "aura",
+   "raw": {
+    "blowOff": 0,
+    "attenuation": 0,
+    "category": 0,
+    "condition": 0,
+    "effEmitCondition": 0,
+    "counterFilter": 0,
+    "kind": 5,
+    "status": 17,
+    "iconNo": 92,
+    "nameString": {
+     "en": "Y'apkar's Aura",
+     "ja": "ヤップカーの光環",
+     "fr": "Y'apkar's Aura",
+     "de": "Y'apkar's Aura",
+     "es": "Y'apkar's Aura",
+     "zh_tw": "亞普卡光環"
+    },
+    "descString": {
+     "en": "The protection of a highly intelligent machine lets fallen comrades stand again. Revives the whole field once, at 1/2 HP. If Y'apkar is on the field, Y'apkar can revive endlessly at 1/2 HP.",
+     "ja": "高度な知能を持つ機械の庇護が、倒れた仲間を再び立ち上がらせる。場の全員を1回復活させる（HP1/2）。場にヤップカーがいれば、ヤップカーは倒れても何度でも復活できる（HP1/2）。",
+     "fr": "The protection of a highly intelligent machine lets fallen comrades stand again. Revives the whole field once, at 1/2 HP. If Y'apkar is on the field, Y'apkar can revive endlessly at 1/2 HP.",
+     "de": "The protection of a highly intelligent machine lets fallen comrades stand again. Revives the whole field once, at 1/2 HP. If Y'apkar is on the field, Y'apkar can revive endlessly at 1/2 HP.",
+     "es": "The protection of a highly intelligent machine lets fallen comrades stand again. Revives the whole field once, at 1/2 HP. If Y'apkar is on the field, Y'apkar can revive endlessly at 1/2 HP.",
+     "zh_tw": "高智慧機械的庇護，讓倒下的同伴再次站起。全場復活1次，血量1/2。若場上有亞普卡，亞普卡死亡後可無限復活，血量1/2。"
+    },
+    "rangePrefixString": {
+     "en": "",
+     "ja": "",
+     "fr": "",
+     "de": "",
+     "es": "",
+     "zh_tw": ""
+    },
+    "weap": 0,
+    "attrib": 0,
+    "range": 0,
+    "filter": 0,
+    "targetDir": 0,
+    "sx": 0,
+    "sy": 0,
+    "emitRatio": 100,
+    "power": 0.0,
+    "spower": 0.5,
+    "successRate": 0,
+    "effID": 3,
+    "life": 6,
+    "capacity": 4904
+   }
+  }
+ ],
+ "characters": [
+  {
+   "raw": {
+    "info": {
+     "ID": 1292,
+     "NameString": {
+      "en": "Y'apkar? Λ",
+      "ja": "ヤップカー?・Λ",
+      "fr": "Y'apkar? Λ",
+      "de": "Y'apkar? Λ",
+      "es": "Y'apkar? Λ",
+      "zh_tw": "亞普卡?・Λ"
+     },
+     "sortNameJa": "",
+     "rarity": 8,
+     "unlockChapter": 1,
+     "kind": 2,
+     "chrType": 1,
+     "boostUpValue": 0,
+     "inEvent": 0,
+     "generation": 2,
+     "dropLV": 1,
+     "rebirthFromID": 557,
+     "ancestorChrID": 557,
+     "isLambda": 1,
+     "canDrop": 0,
+     "addProfs": [],
+     "Jobs": [
+      5169
+     ],
+     "plusType": 6
+    },
+    "jobs": [
+     {
+      "ID": 5169,
+      "chrID": 1292,
+      "name": "",
+      "ImageID": 3007,
+      "ImageScale": 0.0,
+      "Gender": 2,
+      "Species": 8,
+      "SkillBoost": 0,
+      "PlusCount": 0,
+      "LV": 1,
+      "HP": 600,
+      "ATK": 40,
+      "DEF": 40,
+      "SATK": 40,
+      "SDEF": 40,
+      "com_EXP": 0,
+      "EXP": 0,
+      "WAIT": 0,
+      "RANGE": 0,
+      "FrameType": 0,
+      "COIN": 0,
+      "DropJobID": 0,
+      "DropRatio": 0.0,
+      "items": [
+       {
+        "code": 0
+       },
+       {
+        "code": 0
+       },
+       {
+        "code": 0
+       }
+      ],
+      "avoidSleep": 0.0,
+      "avoidPoison": 0.0,
+      "avoidParalyze": 0.0,
+      "avoidConfuse": 0.0,
+      "avoidLoseHeart": 0.0,
+      "avoidStone": 0.0,
+      "avoidDeath": 0.0,
+      "avoidGravity": 0.0,
+      "avoidIced": 0.0,
+      "avoidAddWait": 0.0,
+      "avoidRatioDamage": 0.0,
+      "avoidATKDown": 0.0,
+      "avoidDEFDown": 0.0,
+      "avoidSATKDown": 0.0,
+      "avoidSDEFDown": 0.0,
+      "avoidMove": 0.0,
+      "avoidATKDown2": 0.0,
+      "avoidDEFDown2": 0.0,
+      "avoidSATKDown2": 0.0,
+      "avoidSDEFDown2": 0.0,
+      "IconType": 0,
+      "Attrib": 0,
+      "SkillAttrib": 7,
+      "VS_Species": 0,
+      "VS_power": 0.0,
+      "SkillMask": 0,
+      "SkillSlot": [],
+      "DispSkillSlot": [],
+      "DropSummonID": 0,
+      "DropSummonRatio": 0.0,
+      "DropBuddyID": 0,
+      "DropBuddyRatio": 0.0,
+      "hash": 1074518646,
+      "NameString": {
+       "en": "Y'apkar? Λ",
+       "ja": "ヤップカー?・Λ",
+       "fr": "Y'apkar? Λ",
+       "de": "Y'apkar? Λ",
+       "es": "Y'apkar? Λ",
+       "zh_tw": "亞普卡?・Λ"
+      },
+      "ProfileString": {
+       "en": "Y'apkar was standing by the tavern wooden table, passionately and endlessly describing his grand \"knight rescues the princess\" plan and the beautiful voice that echoed in his head countless times.\n\n\"Enough, Y'apkar. That's the third time this week,\" a weathered yet steady hand gently pressed onto his shoulder. It was Sorman, a semi-retired doctor. Giving the delusional lizardman an exasperated look, he decided to snap him back to reality with harsh truth. \"Instead of wasting your breath swearing to empty air, why not come study with me? I'll teach you real physiology, mechanical engineering, and advanced magitek theory. Once you plow through those boring, heavy tomes, you'll see just how ridiculous your knightly fantasies really are.\"\n\nSorman's plan was simple: use the most tedious knowledge to scare the kid off, make him face reality, and force him to drop those impractical, romantic delusions.\n\nHowever, Sorman never expected he had underestimated the stubborn obsession of a hot-blooded idiot.\n\nDetermined to \"be worthy\" of the princess in his heart—and to prove to Sorman that he wasn't just daydreaming—Y'apkar unleashed unprecedented resolve. He burned the midnight oil, studying relentlessly through countless all-nighters, wrestling with mountains of diagrams and magitek formulas. Years passed in this blur of study.\n\nThat reckless, passionate delusion was actually decoded page by page into solid academic science and technology. Not only did he master the principles behind the precision pulses in his armor, but he even managed to help Sorman repair the long-sealed High Life Machine—a symbol of taboo technology.\n\nThen came that day, deep inside Sorman's laboratory.\n\nAccompanied by a low hum, the heavy alloy door of the High Life Machine slowly slid open. As the steam cleared, a figure emerged from within.\n\nIt was a woman who looked as though she had stepped right out of mythology—the very \"princess\" Y'apkar had yearned for day and night, whom he believed in without a shred of doubt. She remained silent, standing amidst the steam, gazing calmly and gently at Sorman before giving a slight nod.\n\nStanding right beside her, Y'apkar instantly puffed out his chest, his eyes shining with the light of pure faith as his armor's pulse system buzzed faintly from his soaring emotions.\n\nOn the flip side, there was Dr. Sorman.\n\nHe stood frozen in utter shock, staring at the person stepping out of the machine, then glancing at the lizardman beside him in customized magitek armor, wearing a look of \"I told you so.\" Sorman's brain completely short-circuited. His \"hellish, grueling study regime\" meant to thoroughly shatter his apprentice's delusions had somehow actually studied a miracle into existence.\n\nSorman's vision darkened. His knees buckled, and he nearly collapsed on the spot.\n-----------------------------------------------\nLong flaxen hair.\nA golden dress reflecting every ray of light.\nSeven-colored nail polish adorning her fingertips.\nVoluptuous but not vulgar, a bust so firm it seems ready to spring back at the slightest touch.\nPale pink, plump lips.\nCheeks faintly flushed with a touch of vermilion.\nEyelashes fanning out forcefully, reaching toward the heavens.\nEyebrows drawn as sharply as the sweeping stroke of a master swordsman.\nUpper arms as soft as marshmallows.\nA hip line gracefully curved like a crescent moon floating in the sky.\n・\n・\n・\n・\nExquisite silverwork fitted on both arms.\nPale thighs peeking out from a hemline of perfect length.\nAh yes, I had almost forgotten those clear, shining eyes, like the surface of the water on a bright, sunny day.\n\nWhat else, what else could there be―――",
+       "ja": "ヤプカールは酒場の木製のテーブルのそばに立ち、自身の壮大な「騎士による姫の救出計画」と、頭の中で数えきれないほど響き渡る美しい声について、よどみなく熱っぽく語り続けていた。\n\n「もういい、ヤプカール。今週だけでそれも3回目だぞ」\n\n年老いてはいるが確かな重みのある手が、そっとヤプカールの肩に置かれた。半引退した医師のソルマンだった。妄想に憑りつかれたこのトカゲ人間に呆れたような視線を向けながら、彼は現実の厳しさでその目を覚まさせようと決意した。「虚空に向かって誓い言を並べて唾を飛ばすくらいなら、私と一緒に勉強しろ。本当の生理学、機械力学、そして高度な魔導理論を教えてやる。その分厚くて退屈な専門書をすべて読み終えれば、お前の頭の中にある騎士の幻想がいかに荒唐無稽かわかるはずだ」\n\nソルマンの目論見は単純だった。最も退屈な知識でこの若者を気圧し、現実に直面させ、そんな非現実的なロマンチックな妄想をきっぱり諦めさせることだ。\n\nしかし、ソルマンは思いもしなかった。熱血なバカの執念を、彼は甘く見ていたのだ。\n\n心の中の「姫」にふさわしい男になるため、そして自分がただの白昼夢を見ているわけではないとソルマンに証明するため、ヤプカールはこれまでにないほどの並外れた執念を発揮した。夜を徹して勉強し、数えきれないほどの徹夜を重ね、山のような図表や魔導の数式と格闘した。そうして、数年が過ぎ去った。\n\nかつての熱い妄想は、一ページ一ページと読み解かれるうちに、確固たる学問と技術へと昇華されていた。彼は自身の鎧の精密パルスの仕組みを完全にマスターしただけでなく、かつて封印されていた禁忌の技術――「ハイライフ・マシン（高生命機械）」の修復を、ソルマンと共に成功させてしまったのだ。\n\nそして、その日がやってきた。ソルマンの研究所の奥深く。\n\n低い駆動音とともに、ハイライフ・マシンの重厚な合金の扉がゆっくりとスライドして開いた。蒸気が晴れる中、一人の人物がその中から姿を現した。\n\nそれはまるで神話の中から歩み出てきたかのような女性だった――それこそが、ヤプカールが日夜焦がれ、微塵も疑うことなく信じ続けていた「姫」その人だった。彼女は言葉を発せず、蒸気の中に佇みながら、穏やかで優しい眼差しをソルマンに向け、そして小さくうなずいた。\n\nそのすぐ隣で、ヤプカールは胸を張って直立し、あふれ出る感情のせいで鎧のパルスシステムが微かにうなりを上げる中、信仰の光を宿した瞳を輝かせていた。\n\n打って変わって、傍らのソルマン医師。\n\n彼はただ呆然と機械から出てきた人物を見つめ、そして特製の魔導鎧をまとい「やったぞ」と言わばかりの顔をしている隣のトカゲ人間へと視線を戻した。ソルマンの脳みそが完全にフリーズした。弟子の妄想を徹底的に打ち砕くために考案したはずの「地獄の猛勉強特訓」が、よりによって本物の奇蹟を引きずり出してしまったのだ。\n\nソルマンの視界が暗くなった。膝から力が抜け、彼はその場で盛大に気絶しかけた。\n-----------------------------------------------\n亜麻色の長い髪。\nあらゆる光を跳ね返す黄金のドレス。\n指先を彩る七色のマニキュア。\n豊満だが嫌味は無く、\n触れれば弾けそうなバスト。\n薄紅色で、ぷりっとした唇。\nほんのりと朱に染まる頬。\n天を目指し力強く放射状に伸びたまつげ。\n達人の太刀筋のように鋭く引いた眉。\nマシュマロのような二の腕。\n空に浮かぶ三日月のようなヒップライン。\n・\n・\n・\n・\n両の腕にはまる、美しい銀細工。\n絶妙な長さの丈から覗く白い太もも。\nそうだ、よく晴れた日の水面のように\n澄み、輝く瞳を忘れていた。\n\n他には、他には―――",
+       "fr": "Y'apkar was standing by the tavern wooden table, passionately and endlessly describing his grand \"knight rescues the princess\" plan and the beautiful voice that echoed in his head countless times.\n\n\"Enough, Y'apkar. That's the third time this week,\" a weathered yet steady hand gently pressed onto his shoulder. It was Sorman, a semi-retired doctor. Giving the delusional lizardman an exasperated look, he decided to snap him back to reality with harsh truth. \"Instead of wasting your breath swearing to empty air, why not come study with me? I'll teach you real physiology, mechanical engineering, and advanced magitek theory. Once you plow through those boring, heavy tomes, you'll see just how ridiculous your knightly fantasies really are.\"\n\nSorman's plan was simple: use the most tedious knowledge to scare the kid off, make him face reality, and force him to drop those impractical, romantic delusions.\n\nHowever, Sorman never expected he had underestimated the stubborn obsession of a hot-blooded idiot.\n\nDetermined to \"be worthy\" of the princess in his heart—and to prove to Sorman that he wasn't just daydreaming—Y'apkar unleashed unprecedented resolve. He burned the midnight oil, studying relentlessly through countless all-nighters, wrestling with mountains of diagrams and magitek formulas. Years passed in this blur of study.\n\nThat reckless, passionate delusion was actually decoded page by page into solid academic science and technology. Not only did he master the principles behind the precision pulses in his armor, but he even managed to help Sorman repair the long-sealed High Life Machine—a symbol of taboo technology.\n\nThen came that day, deep inside Sorman's laboratory.\n\nAccompanied by a low hum, the heavy alloy door of the High Life Machine slowly slid open. As the steam cleared, a figure emerged from within.\n\nIt was a woman who looked as though she had stepped right out of mythology—the very \"princess\" Y'apkar had yearned for day and night, whom he believed in without a shred of doubt. She remained silent, standing amidst the steam, gazing calmly and gently at Sorman before giving a slight nod.\n\nStanding right beside her, Y'apkar instantly puffed out his chest, his eyes shining with the light of pure faith as his armor's pulse system buzzed faintly from his soaring emotions.\n\nOn the flip side, there was Dr. Sorman.\n\nHe stood frozen in utter shock, staring at the person stepping out of the machine, then glancing at the lizardman beside him in customized magitek armor, wearing a look of \"I told you so.\" Sorman's brain completely short-circuited. His \"hellish, grueling study regime\" meant to thoroughly shatter his apprentice's delusions had somehow actually studied a miracle into existence.\n\nSorman's vision darkened. His knees buckled, and he nearly collapsed on the spot.\n-----------------------------------------------\nLong flaxen hair.\nA golden dress reflecting every ray of light.\nSeven-colored nail polish adorning her fingertips.\nVoluptuous but not vulgar, a bust so firm it seems ready to spring back at the slightest touch.\nPale pink, plump lips.\nCheeks faintly flushed with a touch of vermilion.\nEyelashes fanning out forcefully, reaching toward the heavens.\nEyebrows drawn as sharply as the sweeping stroke of a master swordsman.\nUpper arms as soft as marshmallows.\nA hip line gracefully curved like a crescent moon floating in the sky.\n・\n・\n・\n・\nExquisite silverwork fitted on both arms.\nPale thighs peeking out from a hemline of perfect length.\nAh yes, I had almost forgotten those clear, shining eyes, like the surface of the water on a bright, sunny day.\n\nWhat else, what else could there be―――",
+       "de": "Y'apkar was standing by the tavern wooden table, passionately and endlessly describing his grand \"knight rescues the princess\" plan and the beautiful voice that echoed in his head countless times.\n\n\"Enough, Y'apkar. That's the third time this week,\" a weathered yet steady hand gently pressed onto his shoulder. It was Sorman, a semi-retired doctor. Giving the delusional lizardman an exasperated look, he decided to snap him back to reality with harsh truth. \"Instead of wasting your breath swearing to empty air, why not come study with me? I'll teach you real physiology, mechanical engineering, and advanced magitek theory. Once you plow through those boring, heavy tomes, you'll see just how ridiculous your knightly fantasies really are.\"\n\nSorman's plan was simple: use the most tedious knowledge to scare the kid off, make him face reality, and force him to drop those impractical, romantic delusions.\n\nHowever, Sorman never expected he had underestimated the stubborn obsession of a hot-blooded idiot.\n\nDetermined to \"be worthy\" of the princess in his heart—and to prove to Sorman that he wasn't just daydreaming—Y'apkar unleashed unprecedented resolve. He burned the midnight oil, studying relentlessly through countless all-nighters, wrestling with mountains of diagrams and magitek formulas. Years passed in this blur of study.\n\nThat reckless, passionate delusion was actually decoded page by page into solid academic science and technology. Not only did he master the principles behind the precision pulses in his armor, but he even managed to help Sorman repair the long-sealed High Life Machine—a symbol of taboo technology.\n\nThen came that day, deep inside Sorman's laboratory.\n\nAccompanied by a low hum, the heavy alloy door of the High Life Machine slowly slid open. As the steam cleared, a figure emerged from within.\n\nIt was a woman who looked as though she had stepped right out of mythology—the very \"princess\" Y'apkar had yearned for day and night, whom he believed in without a shred of doubt. She remained silent, standing amidst the steam, gazing calmly and gently at Sorman before giving a slight nod.\n\nStanding right beside her, Y'apkar instantly puffed out his chest, his eyes shining with the light of pure faith as his armor's pulse system buzzed faintly from his soaring emotions.\n\nOn the flip side, there was Dr. Sorman.\n\nHe stood frozen in utter shock, staring at the person stepping out of the machine, then glancing at the lizardman beside him in customized magitek armor, wearing a look of \"I told you so.\" Sorman's brain completely short-circuited. His \"hellish, grueling study regime\" meant to thoroughly shatter his apprentice's delusions had somehow actually studied a miracle into existence.\n\nSorman's vision darkened. His knees buckled, and he nearly collapsed on the spot.\n-----------------------------------------------\nLong flaxen hair.\nA golden dress reflecting every ray of light.\nSeven-colored nail polish adorning her fingertips.\nVoluptuous but not vulgar, a bust so firm it seems ready to spring back at the slightest touch.\nPale pink, plump lips.\nCheeks faintly flushed with a touch of vermilion.\nEyelashes fanning out forcefully, reaching toward the heavens.\nEyebrows drawn as sharply as the sweeping stroke of a master swordsman.\nUpper arms as soft as marshmallows.\nA hip line gracefully curved like a crescent moon floating in the sky.\n・\n・\n・\n・\nExquisite silverwork fitted on both arms.\nPale thighs peeking out from a hemline of perfect length.\nAh yes, I had almost forgotten those clear, shining eyes, like the surface of the water on a bright, sunny day.\n\nWhat else, what else could there be―――",
+       "es": "Y'apkar was standing by the tavern wooden table, passionately and endlessly describing his grand \"knight rescues the princess\" plan and the beautiful voice that echoed in his head countless times.\n\n\"Enough, Y'apkar. That's the third time this week,\" a weathered yet steady hand gently pressed onto his shoulder. It was Sorman, a semi-retired doctor. Giving the delusional lizardman an exasperated look, he decided to snap him back to reality with harsh truth. \"Instead of wasting your breath swearing to empty air, why not come study with me? I'll teach you real physiology, mechanical engineering, and advanced magitek theory. Once you plow through those boring, heavy tomes, you'll see just how ridiculous your knightly fantasies really are.\"\n\nSorman's plan was simple: use the most tedious knowledge to scare the kid off, make him face reality, and force him to drop those impractical, romantic delusions.\n\nHowever, Sorman never expected he had underestimated the stubborn obsession of a hot-blooded idiot.\n\nDetermined to \"be worthy\" of the princess in his heart—and to prove to Sorman that he wasn't just daydreaming—Y'apkar unleashed unprecedented resolve. He burned the midnight oil, studying relentlessly through countless all-nighters, wrestling with mountains of diagrams and magitek formulas. Years passed in this blur of study.\n\nThat reckless, passionate delusion was actually decoded page by page into solid academic science and technology. Not only did he master the principles behind the precision pulses in his armor, but he even managed to help Sorman repair the long-sealed High Life Machine—a symbol of taboo technology.\n\nThen came that day, deep inside Sorman's laboratory.\n\nAccompanied by a low hum, the heavy alloy door of the High Life Machine slowly slid open. As the steam cleared, a figure emerged from within.\n\nIt was a woman who looked as though she had stepped right out of mythology—the very \"princess\" Y'apkar had yearned for day and night, whom he believed in without a shred of doubt. She remained silent, standing amidst the steam, gazing calmly and gently at Sorman before giving a slight nod.\n\nStanding right beside her, Y'apkar instantly puffed out his chest, his eyes shining with the light of pure faith as his armor's pulse system buzzed faintly from his soaring emotions.\n\nOn the flip side, there was Dr. Sorman.\n\nHe stood frozen in utter shock, staring at the person stepping out of the machine, then glancing at the lizardman beside him in customized magitek armor, wearing a look of \"I told you so.\" Sorman's brain completely short-circuited. His \"hellish, grueling study regime\" meant to thoroughly shatter his apprentice's delusions had somehow actually studied a miracle into existence.\n\nSorman's vision darkened. His knees buckled, and he nearly collapsed on the spot.\n-----------------------------------------------\nLong flaxen hair.\nA golden dress reflecting every ray of light.\nSeven-colored nail polish adorning her fingertips.\nVoluptuous but not vulgar, a bust so firm it seems ready to spring back at the slightest touch.\nPale pink, plump lips.\nCheeks faintly flushed with a touch of vermilion.\nEyelashes fanning out forcefully, reaching toward the heavens.\nEyebrows drawn as sharply as the sweeping stroke of a master swordsman.\nUpper arms as soft as marshmallows.\nA hip line gracefully curved like a crescent moon floating in the sky.\n・\n・\n・\n・\nExquisite silverwork fitted on both arms.\nPale thighs peeking out from a hemline of perfect length.\nAh yes, I had almost forgotten those clear, shining eyes, like the surface of the water on a bright, sunny day.\n\nWhat else, what else could there be―――",
+       "zh_tw": "亞普卡正站在酒館的木桌旁，唾沫橫飛地向同伴們描述著他那套宏大的「騎士救美」計畫，以及他腦海中那個無數次迴盪的美麗聲音。\n\n「夠了，亞普卡。你這已經是這禮拜第三次講這段了。」\n\n一隻蒼老但穩健的手輕輕按在亞普卡的肩膀上。那是索曼，一位半退休的醫生。他用無奈的眼神看著這隻充滿妄想的蜥蜴人，決定用現實狠狠敲醒他。「與其在這裡浪費口水對著空氣發誓，不如跟我去讀書。我來教你真正的生理學、機械力學和高等魔導理論。等你把這些枯燥的厚重典籍讀完，你就知道自己腦子裡那些騎士幻想有多荒謬了。」\n\n索曼本來打的算盤很簡單：用最枯燥的知識把這小子給勸退，讓他認清現實，乖乖放棄那些不切實際的浪漫妄想。\n\n然而，索曼萬萬沒想到，他低估了一個熱血笨蛋的執念。\n\n為了能夠「配得上」自己心中的公主，也為了向索曼證明自己不是在做白日夢，亞普卡爆發出了前所未有的毅力。挑燈夜戰、熬夜苦讀，在無數個通宵裡與成堆的圖表和魔導算式搏鬥。這一讀，就是好幾年。\n\n當年的熱血妄想，竟然真的被他一頁一頁地啃成了紮實的學術與技術。他不僅學會了盔甲上所有精密脈衝的運作原理，甚至還真跟著索曼把那台塵封許久、象徵著禁忌技術的高生命機械（High Life Machine）給修復了。\n\n直到那一天，在索曼醫生的實驗室深處。\n\n伴隨著低沉的運轉聲，高生命機械那扇厚重的合金大門緩緩滑開。蒸汽散去，一個身影從中走了出來。\n\n那是一位外表宛如從神話中走出的女性——正是亞普卡日思夜想、深信不疑的「公主」。她沒有說話，隻身站在蒸氣之中，目光平靜而溫柔地望向索曼，隨後微微點了點頭。\n\n站在一旁的亞普卡立刻挺直胸膛，激動得雙眼閃爍著信仰的光芒，盔甲的脈衝系統因他劇烈的情緒起伏而發出微弱的蜂鳴。\n\n反觀一旁的索曼醫生。\n\n他呆若木雞地看著眼前從機械中走出的人，又看了看身旁穿著特製魔導盔甲、一臉「我做到了」的亞普卡。索曼的腦袋瞬間當機——他當初想用來徹底粉碎學徒妄想的「地獄級苦讀特訓」，居然真的把奇蹟給讀出來了。\n\n索曼隻覺得眼前一黑，雙腿一軟，差點當場昏死過去。\n\n-----------------------------------------------\n亞麻色的長髮。\n反射著一切光芒的金色禮服。\n點綴著指尖的七彩指甲油。\n豐滿卻不顯俗氣，彷彿一觸碰便會彈起的雙峰。\n透著淡淡粉紅，豐潤飽滿的雙唇。\n微微染上緋紅的雙頰。\n直指天際、充滿力度呈放射狀展開的睫毛。\n宛如劍術達人的刀鋒軌跡般，銳利勾勒的眉型。\n猶如棉花糖般柔軟的雙臂。\n彷彿懸浮於空中的弦月般的臀部曲線。\n・\n・\n・\n・\n環抱於雙腕上，美麗的銀製飾品。\n從恰到好處的裙襬間，若隱若現的白皙大腿。\n對了，差點忘了那宛如大晴天下的水面般清澈閃耀的雙眸。\n\n還有什麼，還有什麼呢―――"
+      },
+      "HPmin": 600,
+      "ATKmin": 40,
+      "DEFmin": 40,
+      "SATKmin": 40,
+      "SDEFmin": 40,
+      "HPmax": 6000,
+      "ATKmax": 400,
+      "DEFmax": 400,
+      "SATKmax": 400,
+      "SDEFmax": 400,
+      "EXPmax": 9000000,
+      "HPcoeff": 1.100000023841858,
+      "ATKcoeff": 1.100000023841858,
+      "DEFcoeff": 1.100000023841858,
+      "SATKcoeff": 1.100000023841858,
+      "SDEFcoeff": 1.100000023841858,
+      "EXPcoeff": 2.0999999046325684,
+      "skillMasterLevel": [
+       1,
+       30,
+       50,
+       90
+      ],
+      "skills": [
+       "@delusion",
+       "@madness",
+       "@aura",
+       "@awakening"
+      ],
+      "_cost": 0
+     }
+    ],
+    "rebirth": {
+     "ID": 69,
+     "availableVersion": 2.5,
+     "srcChrID": 557,
+     "dstChrID": 1292,
+     "coins": 20000,
+     "items": [
+      {
+       "code": 35122
+      },
+      {
+       "code": 25345
+      },
+      {
+       "code": 24833
+      }
+     ],
+     "mons": [
+      {
+       "chrID": 969,
+       "level": 50
+      },
+      {
+       "chrID": 48,
+       "level": 50
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "asset_db": {
+  "Pieces": [
+   {
+    "id": 3007,
+    "w": 106,
+    "h": 106,
+    "ver": 132
+   }
+  ],
+  "Illusts": [
+   {
+    "id": 3007,
+    "w": 878,
+    "h": 1024,
+    "ver": 131
+   }
+  ]
+ },
+ "native": [
+  "yapkar_native"
+ ]
+}

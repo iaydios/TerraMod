@@ -1,0 +1,13 @@
+{
+ "name": "Kana",
+ "chr_ids": [
+  1290
+ ],
+ "native": [
+  "kana_native"
+ ],
+ "icons": [
+  129,
+  130
+ ]
+}
