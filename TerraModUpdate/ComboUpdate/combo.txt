@@ -1,6 +1,0 @@
-# One Update folder name per line (lines starting with # are ignored). Any subset works.
-# 每行一個 Update 資料夾名稱（# 開頭的行會被忽略），任意組合都可以。
-MacuriUpdate
-KanaUpdate
-GugbaUpdate
-YapkarUpdate
