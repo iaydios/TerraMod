@@ -1,5 +1,7 @@
 # TerraMod
 
+Hello from Taiwan~
+
 TerraMod is a toolchain for adding **new content** to Terra Battle when it runs against the reTB private server (reTBHost). Supported content: characters, DNA recodes, skills, companions (buddies) and images. The game is Unity 2017.4, IL2CPP, arm64.
 
 You describe the content in JSON specs, and the tools do the rest:
